@@ -1,4 +1,4 @@
-import { useMemo, useRef, useEffect } from "react"
+import { useMemo, useRef, useEffect, useState } from "react"
 import animeData, {
   getAnimeTitle,
   COUNTRIES,
@@ -57,10 +57,15 @@ export const App = () => {
     getDefaultTopK(DEFAULT_COUNTRY)
   )
 
-  // 单元格宽度随 Top-K 自适应：K 越大格子越窄，整体宽度收敛在约 1240px 内
-  const cellW = Math.max(48, Math.min(112, Math.round(1240 / (topK + 1))))
-  const cellFont =
-    cellW < 56 ? "text-[10px]" : language === "en" ? "text-xs" : "text-sm"
+  // 单元格宽度随 Top-K 自适应：K 越大格子越窄，整体宽度收敛在约 1300px 内
+  const cellW = Math.max(48, Math.min(116, Math.round(1300 / (topK + 1))))
+  // 字号与最大行数随格宽自适应：越窄→字越小、行数越多，尽量用满纵向空间、显示更全
+  const cellTier =
+    cellW < 52
+      ? { font: "text-[10px]", clamp: "line-clamp-6" }
+      : cellW < 72
+      ? { font: "text-xs", clamp: "line-clamp-5" }
+      : { font: "text-sm", clamp: "line-clamp-4" }
 
   // 当前选中国别的 年份->列表 映射（稳定引用，供下游 memo 依赖）
   const countryData = useMemo(
@@ -197,6 +202,25 @@ export const App = () => {
 
   const totalAnime = visibleAnimeKeys.length
 
+  // 悬停 ~0.7s 后，对「被截断」的标题在原位上方浮出完整标题（fixed 定位，绕过网格滚动裁剪）
+  const [tip, setTip] = useState<{ text: string; x: number; y: number } | null>(
+    null
+  )
+  const tipTimer = useRef<number | undefined>(undefined)
+  const showTipFor = (el: HTMLElement, text: string) => {
+    window.clearTimeout(tipTimer.current)
+    const span = el.querySelector("span")
+    if (!span || span.scrollHeight <= span.clientHeight + 1) return // 未截断则不提示
+    const r = el.getBoundingClientRect()
+    const x = r.left + r.width / 2
+    const y = r.top
+    tipTimer.current = window.setTimeout(() => setTip({ text, x, y }), 700)
+  }
+  const hideTip = () => {
+    window.clearTimeout(tipTimer.current)
+    setTip(null)
+  }
+
   // 重置显示设定为默认（不动已选的"看过"记录）
   const resetSettings = () => {
     setSelectedCountry(DEFAULT_COUNTRY)
@@ -332,8 +356,8 @@ export const App = () => {
                             className={`
                               h-16 md:h-20
                               border-l break-words text-center shrink-0 inline-flex items-center
-                              p-1 overflow-hidden justify-center cursor-pointer
-                              ${cellFont}
+                              p-0.5 overflow-hidden justify-center cursor-pointer
+                              ${cellTier.font}
                               ${
                                 isSelected
                                   ? "bg-green-500"
@@ -341,8 +365,12 @@ export const App = () => {
                               }
                               transition-colors duration-200
                             `}
-                            title={displayTitle}
+                            onMouseEnter={(e) =>
+                              showTipFor(e.currentTarget, displayTitle)
+                            }
+                            onMouseLeave={hideTip}
                             onClick={() => {
+                              hideTip()
                               setSelectedAnime((prev) => {
                                 if (isSelected) {
                                   return prev.filter(
@@ -354,11 +382,7 @@ export const App = () => {
                             }}
                           >
                             <span
-                              className={`leading-tight w-full ${
-                                language === "en"
-                                  ? "line-clamp-4"
-                                  : "line-clamp-3"
-                              }`}
+                              className={`leading-tight w-full ${cellTier.clamp}`}
                             >
                               {displayTitle}
                             </span>
@@ -504,6 +528,15 @@ export const App = () => {
           </a>
         </div>
       </div>
+
+      {tip && (
+        <div
+          className="fixed z-50 pointer-events-none -translate-x-1/2 -translate-y-full -mt-1.5 max-w-[16rem] rounded-lg bg-zinc-900/95 px-2.5 py-1.5 text-sm leading-snug text-white text-center shadow-lg"
+          style={{ left: tip.x, top: tip.y }}
+        >
+          {tip.text}
+        </div>
+      )}
     </>
   )
 }
