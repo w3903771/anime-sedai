@@ -4,6 +4,7 @@ export const translations = {
   zh: {
     title: "动画世代",
     subtitle: "点击选择你看过的动画",
+    hoverHint: "鼠标停留可查看完整标题",
     website: "anime-sedai.ttzg.site",
     watchedCount: "我看过 {{count}}/{{total}} 部动画",
     selectAll: "全选",
@@ -55,6 +56,7 @@ export const translations = {
   en: {
     title: "Anime Sedai",
     subtitle: "Click to select anime you have watched",
+    hoverHint: "hover to see the full title",
     website: "anime-sedai.ttzg.site",
     watchedCount: "I have watched {{count}}/{{total}} anime",
     selectAll: "Select All",
@@ -106,6 +108,7 @@ export const translations = {
   ja: {
     title: "アニメ世代",
     subtitle: "見たアニメをタップして選択する",
+    hoverHint: "マウスを乗せると全文表示",
     website: "anime-sedai.ttzg.site",
     watchedCount: "{{count}}/{{total}} のアニメを見た",
     selectAll: "すべて選択",

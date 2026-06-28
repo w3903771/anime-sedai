@@ -3,3 +3,25 @@
 button {
   @apply cursor-pointer;
 }
+
+/* 截断标题悬停浮窗：轻微上浮+淡入(120ms)。transform 由动画以 fill:both 持有，
+   保证定位(居中、上移)始终生效；减少动效时近乎瞬显但定位不变。 */
+@keyframes anime-tip-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -100%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -100%) scale(1);
+  }
+}
+.anime-tip {
+  animation: anime-tip-in 0.12s ease-out both;
+  transform-origin: bottom center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .anime-tip {
+    animation-duration: 0.01ms;
+  }
+}

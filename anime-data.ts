@@ -35,9 +35,10 @@ export type SortBy = "trends" | "rank"
 export const getCountrySort = (country: string): SortBy =>
   country === "日本" ? "trends" : "rank"
 
-// 每个国别默认的「每年数量」(Top-K)。中国含 web，条目更多，默认放宽到 20。
-export const getDefaultTopK = (country: string): number =>
-  country === "中国" ? 20 : 12
+// 「每年数量」(Top-K) 上限：数据每格最多存 24 条（bgm 列表页第 1 页上限）
+export const MAX_TOPK = 24
+// 所有国别默认都用最大值（每格尽量多显示）
+export const getDefaultTopK = (_country: string): number => MAX_TOPK
 
 // 取所有国别年份的并集并升序排序，保证年份范围 UI 与选中国别无关、保持稳定。
 export const getAllYears = (d: Data = data): string[] => {

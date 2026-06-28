@@ -213,8 +213,8 @@ export const App = () => {
     if (!span || span.scrollHeight <= span.clientHeight + 1) return // 未截断则不提示
     const r = el.getBoundingClientRect()
     const x = r.left + r.width / 2
-    const y = r.top
-    tipTimer.current = window.setTimeout(() => setTip({ text, x, y }), 700)
+    const y = r.top - 14 // 上移留出间隙，避免被鼠标指针遮住
+    tipTimer.current = window.setTimeout(() => setTip({ text, x, y }), 600)
   }
   const hideTip = () => {
     window.clearTimeout(tipTimer.current)
@@ -317,6 +317,10 @@ export const App = () => {
                 <h1 className="tracking-tight">
                   {t("title")}
                   <span className="remove"> - {t("subtitle")}</span>
+                  <span className="remove font-normal text-zinc-400">
+                    {" · "}
+                    {t("hoverHint")}
+                  </span>
                   <span className="ml-2 text-zinc-400 font-medium">
                     {t("website")}
                   </span>
@@ -531,10 +535,11 @@ export const App = () => {
 
       {tip && (
         <div
-          className="fixed z-50 pointer-events-none -translate-x-1/2 -translate-y-full -mt-1.5 max-w-[16rem] rounded-lg bg-zinc-900/95 px-2.5 py-1.5 text-sm leading-snug text-white text-center shadow-lg"
+          className="anime-tip fixed z-50 pointer-events-none max-w-[15rem] rounded-lg bg-zinc-900/90 px-3 py-1.5 text-sm font-medium leading-snug text-white text-center shadow-xl ring-1 ring-white/15 backdrop-blur-sm"
           style={{ left: tip.x, top: tip.y }}
         >
           {tip.text}
+          <span className="absolute left-1/2 top-full h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-[2px] bg-zinc-900/90" />
         </div>
       )}
     </>
