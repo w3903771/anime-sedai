@@ -1,0 +1,47 @@
+name: Update anime data
+
+# 每月 1 号自动重抓「当前年份 × 全部国别」的数据，就地修改 anime-data.json 并提交。
+# 也可在 Actions 页面手动触发。
+
+on:
+  schedule:
+    - cron: "0 0 1 * *" # 每月 1 号 00:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# 避免与上一次未完成的运行并发写仓库
+concurrency:
+  group: update-anime-data
+  cancel-in-progress: false
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Refresh current-year data (all regions)
+        run: bun run data:update
+
+      - name: Commit & push if changed
+        run: |
+          if git diff --quiet -- anime-data.json; then
+            echo "数据无变化，跳过提交。"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add anime-data.json
+          git commit -m "chore(data): monthly refresh $(date -u +%Y-%m)"
+          git push

@@ -1,0 +1,61 @@
+name: Deploy to GitHub Pages
+
+# 构建 Vite 静态站点并部署到 GitHub Pages（自定义域名 anime-sedai.ttzg.site）。
+# 触发：推送到 main；每月数据更新工作流完成后（让月更数据自动上线）；手动触发。
+# 前置：仓库 Settings → Pages → Source 选择「GitHub Actions」；
+#       并在 ttzg.site 的 DNS 加一条 CNAME 记录 anime-sedai → <你的GitHub用户名>.github.io。
+on:
+  push:
+    branches: [main]
+  workflow_run:
+    workflows: ["Update anime data"]
+    types: [completed]
+  workflow_dispatch:
+
+# 部署 Pages 所需权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时间只允许一个部署，但不取消进行中的（避免半成品上线）
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        run: bun run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
