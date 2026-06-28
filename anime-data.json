@@ -10796,16 +10796,16 @@
         "score": 6.9
       },
       {
-        "titleZh": "神雕侠侣II：襄阳风云",
-        "titleEn": "神雕俠侶II：襄陽風雲",
-        "titleJa": "神雕俠侶II：襄陽風雲",
-        "score": 6.4
-      },
-      {
         "titleZh": "快乐东西1",
         "titleEn": "快乐东西1",
         "titleJa": "快乐东西1",
         "score": 6.5
+      },
+      {
+        "titleZh": "神雕侠侣II：襄阳风云",
+        "titleEn": "神雕俠侶II：襄陽風雲",
+        "titleJa": "神雕俠侶II：襄陽風雲",
+        "score": 6.4
       },
       {
         "titleZh": "蓝猫淘气3000问之恐龙时代",
@@ -10814,16 +10814,16 @@
         "score": 6.4
       },
       {
-        "titleZh": "守护精灵",
-        "titleEn": "수호요정 미셸",
-        "titleJa": "수호요정 미셸",
-        "score": 6.1
-      },
-      {
         "titleZh": "BRAVO东东",
         "titleEn": "BRAVO东东",
         "titleJa": "BRAVO东东",
         "score": 6.3
+      },
+      {
+        "titleZh": "守护精灵",
+        "titleEn": "수호요정 미셸",
+        "titleJa": "수호요정 미셸",
+        "score": 6.1
       },
       {
         "titleZh": "宝贝女儿好妈妈",
@@ -10852,16 +10852,16 @@
         "score": 6.6
       },
       {
-        "titleZh": "蓝猫淘气3000问之太空历险记",
-        "titleEn": "蓝猫淘气3000问之太空历险记",
-        "titleJa": "蓝猫淘气3000问之太空历险记",
-        "score": 5.9
-      },
-      {
         "titleZh": "东方神娃",
         "titleEn": "东方神娃",
         "titleJa": "东方神娃",
         "score": 6.1
+      },
+      {
+        "titleZh": "蓝猫淘气3000问之太空历险记",
+        "titleEn": "蓝猫淘气3000问之太空历险记",
+        "titleJa": "蓝猫淘气3000问之太空历险记",
+        "score": 5.9
       },
       {
         "titleZh": "天上掉下个猪八戒",
@@ -10994,16 +10994,16 @@
         "score": 5.8
       },
       {
-        "titleZh": "果冻三剑客",
-        "titleEn": "果冻三剑客",
-        "titleJa": "果冻三剑客",
-        "score": 5.5
-      },
-      {
         "titleZh": "猪猪侠第二部：武侠2008",
         "titleEn": "猪猪侠第二部：武侠2008",
         "titleJa": "猪猪侠第二部：武侠2008",
         "score": 5.7
+      },
+      {
+        "titleZh": "果冻三剑客",
+        "titleEn": "果冻三剑客",
+        "titleJa": "果冻三剑客",
+        "score": 5.5
       },
       {
         "titleZh": "雷速登闪电冲线",
@@ -11014,10 +11014,28 @@
     ],
     "2008": [
       {
+        "titleZh": "打，打个大西瓜",
+        "titleEn": "打，打个大西瓜",
+        "titleJa": "打，打个大西瓜",
+        "score": 7.3
+      },
+      {
         "titleZh": "秦时明月之夜尽天明",
         "titleEn": "秦时明月之夜尽天明",
         "titleJa": "秦时明月之夜尽天明",
         "score": 7.1
+      },
+      {
+        "titleZh": "超扯童话血多",
+        "titleEn": "超扯童话血多",
+        "titleJa": "超扯童话血多",
+        "score": 7.1
+      },
+      {
+        "titleZh": "茗记",
+        "titleEn": "茗记",
+        "titleJa": "茗记",
+        "score": 6.9
       },
       {
         "titleZh": "虹猫仗剑走天涯",
@@ -11032,16 +11050,16 @@
         "score": 6.3
       },
       {
-        "titleZh": "劲爆战士",
-        "titleEn": "劲爆战士",
-        "titleJa": "劲爆战士",
-        "score": 5.8
-      },
-      {
         "titleZh": "福五鼠之三十六计",
         "titleEn": "福五鼠之三十六计",
         "titleJa": "福五鼠之三十六计",
         "score": 6.2
+      },
+      {
+        "titleZh": "劲爆战士",
+        "titleEn": "劲爆战士",
+        "titleJa": "劲爆战士",
+        "score": 5.8
       },
       {
         "titleZh": "羊羊运动会",
@@ -11050,16 +11068,16 @@
         "score": 5.8
       },
       {
-        "titleZh": "星际飚车王",
-        "titleEn": "星际飚车王",
-        "titleJa": "星际飚车王",
-        "score": 5.2
-      },
-      {
         "titleZh": "猪猪侠勇闯未来城",
         "titleEn": "猪猪侠勇闯未来城",
         "titleJa": "猪猪侠勇闯未来城",
         "score": 5.4
+      },
+      {
+        "titleZh": "星际飚车王",
+        "titleEn": "星际飚车王",
+        "titleJa": "星际飚车王",
+        "score": 5.2
       }
     ],
     "2009": [
@@ -11070,10 +11088,22 @@
         "score": 8
       },
       {
+        "titleZh": "李献计历险记",
+        "titleEn": "李献计历险记",
+        "titleJa": "李献计历险记",
+        "score": 7.7
+      },
+      {
         "titleZh": "三国演义",
         "titleEn": "三国演义",
         "titleJa": "三国演义",
         "score": 7.3
+      },
+      {
+        "titleZh": "我叫MT 第一季",
+        "titleEn": "我叫MT 第一季",
+        "titleJa": "我叫MT 第一季",
+        "score": 7.1
       },
       {
         "titleZh": "百变机兽之洛洛历险记",
@@ -11085,6 +11115,18 @@
         "titleZh": "七色战记",
         "titleEn": "七色战记",
         "titleJa": "七色战记",
+        "score": 6.9
+      },
+      {
+        "titleZh": "我叫MT 第二季",
+        "titleEn": "我叫MT 第二季",
+        "titleJa": "我叫MT 第二季",
+        "score": 6.9
+      },
+      {
+        "titleZh": "水脑袋",
+        "titleEn": "Water Brain",
+        "titleJa": "Water Brain",
         "score": 6.9
       },
       {
@@ -11100,16 +11142,16 @@
         "score": 6.6
       },
       {
-        "titleZh": "战龙四驱",
-        "titleEn": "战龙四驱",
-        "titleJa": "战龙四驱",
-        "score": 6.2
-      },
-      {
         "titleZh": "虹猫蓝兔光明剑",
         "titleEn": "虹猫蓝兔光明剑",
         "titleJa": "虹猫蓝兔光明剑",
         "score": 6.3
+      },
+      {
+        "titleZh": "战龙四驱",
+        "titleEn": "战龙四驱",
+        "titleJa": "战龙四驱",
+        "score": 6.2
       },
       {
         "titleZh": "电击小子 第二部",
@@ -11124,9 +11166,21 @@
         "score": 6
       },
       {
+        "titleZh": "电击小子",
+        "titleEn": "电击小子",
+        "titleJa": "电击小子",
+        "score": 6
+      },
+      {
         "titleZh": "恐龙宝贝之龙神勇士",
         "titleEn": "恐龙宝贝之龙神勇士",
         "titleJa": "恐龙宝贝之龙神勇士",
+        "score": 5.8
+      },
+      {
+        "titleZh": "围棋少年2",
+        "titleEn": "围棋少年2",
+        "titleJa": "围棋少年2",
         "score": 5.8
       },
       {
@@ -11134,18 +11188,6 @@
         "titleEn": "小牛向前冲",
         "titleJa": "小牛向前冲",
         "score": 5.7
-      },
-      {
-        "titleZh": "电击小子",
-        "titleEn": "电击小子",
-        "titleJa": "电击小子",
-        "score": 6
-      },
-      {
-        "titleZh": "围棋少年2",
-        "titleEn": "围棋少年2",
-        "titleJa": "围棋少年2",
-        "score": 5.8
       },
       {
         "titleZh": "百变猪猪侠",
@@ -11180,6 +11222,18 @@
         "score": 6.9
       },
       {
+        "titleZh": "小胖妞",
+        "titleEn": "小胖妞",
+        "titleJa": "小胖妞",
+        "score": 6.9
+      },
+      {
+        "titleZh": "我叫MT 第三季",
+        "titleEn": "我叫MT 第三季",
+        "titleJa": "我叫MT 第三季",
+        "score": 6.9
+      },
+      {
         "titleZh": "2010新西游记",
         "titleEn": "西游记 (2010)",
         "titleJa": "西游记 (2010)",
@@ -11204,12 +11258,6 @@
         "score": 6.6
       },
       {
-        "titleZh": "生肖传奇之十二生肖总动员",
-        "titleEn": "生肖传奇之十二生肖总动员",
-        "titleJa": "生肖传奇之十二生肖总动员",
-        "score": 6.4
-      },
-      {
         "titleZh": "果宝特攻",
         "titleEn": "果宝特攻",
         "titleJa": "果宝特攻",
@@ -11222,16 +11270,16 @@
         "score": 6.5
       },
       {
+        "titleZh": "生肖传奇之十二生肖总动员",
+        "titleEn": "生肖传奇之十二生肖总动员",
+        "titleJa": "生肖传奇之十二生肖总动员",
+        "score": 6.4
+      },
+      {
         "titleZh": "蓝猫龙骑团之生命之花",
         "titleEn": "蓝猫龙骑团之生命之花",
         "titleJa": "蓝猫龙骑团之生命之花",
         "score": 6.2
-      },
-      {
-        "titleZh": "火力少年王3 动画版",
-        "titleEn": "火力少年王3 动画版",
-        "titleJa": "火力少年王3 动画版",
-        "score": 6
       },
       {
         "titleZh": "猪猪侠之积木世界的童话故事",
@@ -11240,10 +11288,28 @@
         "score": 6.2
       },
       {
+        "titleZh": "茗记2-初织恋",
+        "titleEn": "茗记2-初织恋",
+        "titleJa": "茗记2-初织恋",
+        "score": 6.2
+      },
+      {
         "titleZh": "开心宝贝",
         "titleEn": "开心宝贝 第一季",
         "titleJa": "开心宝贝 第一季",
         "score": 6.1
+      },
+      {
+        "titleZh": "火力少年王3 动画版",
+        "titleEn": "火力少年王3 动画版",
+        "titleJa": "火力少年王3 动画版",
+        "score": 6
+      },
+      {
+        "titleZh": "茗记3 - 取舍",
+        "titleEn": "茗记之取舍",
+        "titleJa": "茗记之取舍",
+        "score": 5.9
       },
       {
         "titleZh": "羊羊快乐的一年",
@@ -11278,16 +11344,16 @@
         "score": 7.9
       },
       {
+        "titleZh": "罗小黑战记",
+        "titleEn": "罗小黑战记",
+        "titleJa": "罗小黑战记",
+        "score": 7.8
+      },
+      {
         "titleZh": "超兽武装之勇者无惧",
         "titleEn": "超兽武装之勇者无惧",
         "titleJa": "超兽武装之勇者无惧",
         "score": 7.6
-      },
-      {
-        "titleZh": "超兽武装之仁者无敌",
-        "titleEn": "超兽武装之仁者无敌",
-        "titleJa": "超兽武装之仁者无敌",
-        "score": 7.4
       },
       {
         "titleZh": "秦汉英雄传",
@@ -11296,9 +11362,33 @@
         "score": 7.5
       },
       {
+        "titleZh": "超兽武装之仁者无敌",
+        "titleEn": "超兽武装之仁者无敌",
+        "titleJa": "超兽武装之仁者无敌",
+        "score": 7.4
+      },
+      {
+        "titleZh": "红领巾侠",
+        "titleEn": "红领巾侠",
+        "titleJa": "红领巾侠",
+        "score": 7.1
+      },
+      {
+        "titleZh": "我叫MT 第四季",
+        "titleEn": "我叫MT 第四季",
+        "titleJa": "我叫MT 第四季",
+        "score": 7
+      },
+      {
         "titleZh": "甜心格格",
         "titleEn": "甜心格格",
         "titleJa": "甜心格格",
+        "score": 6.9
+      },
+      {
+        "titleZh": "我叫MT 第五季",
+        "titleEn": "我叫MT 第五季",
+        "titleJa": "我叫MT 第五季",
         "score": 6.9
       },
       {
@@ -11308,10 +11398,10 @@
         "score": 6.4
       },
       {
-        "titleZh": "开心宝贝之开心超人大作战",
-        "titleEn": "开心宝贝之开心超人大作战",
-        "titleJa": "开心宝贝之开心超人大作战",
-        "score": 6.2
+        "titleZh": "啦啦啦德玛西亚",
+        "titleEn": "啦啦啦德玛西亚",
+        "titleJa": "啦啦啦德玛西亚",
+        "score": 6.4
       },
       {
         "titleZh": "开心宝贝之开心超人",
@@ -11320,16 +11410,16 @@
         "score": 6.3
       },
       {
+        "titleZh": "开心宝贝之开心超人大作战",
+        "titleEn": "开心宝贝之开心超人大作战",
+        "titleJa": "开心宝贝之开心超人大作战",
+        "score": 6.2
+      },
+      {
         "titleZh": "斗龙战士",
         "titleEn": "斗龙战士",
         "titleJa": "斗龙战士",
         "score": 6.2
-      },
-      {
-        "titleZh": "蓝猫龙骑团之炫迪传奇",
-        "titleEn": "蓝猫龙骑团之炫迪传奇",
-        "titleJa": "蓝猫龙骑团之炫迪传奇",
-        "score": 5.5
       },
       {
         "titleZh": "虹猫蓝兔勇者归来",
@@ -11338,16 +11428,16 @@
         "score": 5.9
       },
       {
-        "titleZh": "巴啦啦小魔仙之彩虹心石",
-        "titleEn": "巴啦啦小魔仙之彩虹心石",
-        "titleJa": "巴啦啦小魔仙之彩虹心石",
-        "score": 5.6
-      },
-      {
         "titleZh": "摩尔庄园",
         "titleEn": "摩尔庄园",
         "titleJa": "摩尔庄园",
         "score": 5.7
+      },
+      {
+        "titleZh": "巴啦啦小魔仙之彩虹心石",
+        "titleEn": "巴啦啦小魔仙之彩虹心石",
+        "titleJa": "巴啦啦小魔仙之彩虹心石",
+        "score": 5.6
       },
       {
         "titleZh": "喜羊羊与灰太狼之给快乐加油",
@@ -11360,6 +11450,12 @@
         "titleEn": "奇思妙想喜羊羊",
         "titleJa": "奇思妙想喜羊羊",
         "score": 5.6
+      },
+      {
+        "titleZh": "蓝猫龙骑团之炫迪传奇",
+        "titleEn": "蓝猫龙骑团之炫迪传奇",
+        "titleJa": "蓝猫龙骑团之炫迪传奇",
+        "score": 5.5
       },
       {
         "titleZh": "饼干警长",
@@ -11394,9 +11490,33 @@
         "score": 7
       },
       {
+        "titleZh": "秦时明月之万里长城",
+        "titleEn": "秦时明月之万里长城",
+        "titleJa": "秦时明月之万里长城",
+        "score": 7
+      },
+      {
+        "titleZh": "十万个冷笑话 第一季",
+        "titleEn": "十万个冷笑话 第一季",
+        "titleJa": "十万个冷笑话 第一季",
+        "score": 6.8
+      },
+      {
         "titleZh": "上海蝙蝠侠",
         "titleEn": "上海蝙蝠侠",
         "titleJa": "上海蝙蝠侠",
+        "score": 6.7
+      },
+      {
+        "titleZh": "幸福小镇 边境王篇",
+        "titleEn": "幸福小镇 边境王篇",
+        "titleJa": "幸福小镇 边境王篇",
+        "score": 6.7
+      },
+      {
+        "titleZh": "我叫MT 第六季",
+        "titleEn": "我叫MT 第六季",
+        "titleJa": "我叫MT 第六季",
         "score": 6.7
       },
       {
@@ -11418,6 +11538,12 @@
         "score": 6.5
       },
       {
+        "titleZh": "果宝特攻第二部",
+        "titleEn": "果宝特攻2",
+        "titleJa": "果宝特攻2",
+        "score": 6.4
+      },
+      {
         "titleZh": "开心宝贝之开心星星球",
         "titleEn": "开心宝贝之开心星星球",
         "titleJa": "开心宝贝之开心星星球",
@@ -11430,22 +11556,22 @@
         "score": 6.3
       },
       {
-        "titleZh": "钢铁飞龙",
-        "titleEn": "钢铁飞龙",
-        "titleJa": "钢铁飞龙",
-        "score": 6
-      },
-      {
-        "titleZh": "果宝特攻第二部",
-        "titleEn": "果宝特攻2",
-        "titleJa": "果宝特攻2",
-        "score": 6.4
-      },
-      {
         "titleZh": "侠岚 振翼篇",
         "titleEn": "侠岚",
         "titleJa": "侠岚",
         "score": 6.3
+      },
+      {
+        "titleZh": "啦啦啦德玛西亚 第二季",
+        "titleEn": "啦啦啦德玛西亚 第二季",
+        "titleJa": "啦啦啦德玛西亚 第二季",
+        "score": 6.2
+      },
+      {
+        "titleZh": "钢铁飞龙",
+        "titleEn": "钢铁飞龙",
+        "titleJa": "钢铁飞龙",
+        "score": 6
       },
       {
         "titleZh": "神龙拯救队之元气星魂",
@@ -11460,10 +11586,10 @@
         "score": 5.7
       },
       {
-        "titleZh": "喜羊羊与灰太狼之开心日记",
-        "titleEn": "喜羊羊与灰太狼之开心日记",
-        "titleJa": "喜羊羊与灰太狼之开心日记",
-        "score": 5.1
+        "titleZh": "熊出没",
+        "titleEn": "熊出没",
+        "titleJa": "熊出没",
+        "score": 5.6
       },
       {
         "titleZh": "赛尔号第1季：雷伊传说",
@@ -11472,16 +11598,16 @@
         "score": 5.5
       },
       {
+        "titleZh": "喜羊羊与灰太狼之开心日记",
+        "titleEn": "喜羊羊与灰太狼之开心日记",
+        "titleJa": "喜羊羊与灰太狼之开心日记",
+        "score": 5.1
+      },
+      {
         "titleZh": "喜羊羊与灰太狼之竞技大联盟",
         "titleEn": "喜羊羊与灰太狼之竞技大联盟",
         "titleJa": "喜羊羊与灰太狼之竞技大联盟",
         "score": 5.1
-      },
-      {
-        "titleZh": "熊出没",
-        "titleEn": "熊出没",
-        "titleJa": "熊出没",
-        "score": 5.6
       }
     ],
     "2013": [
@@ -11498,6 +11624,18 @@
         "score": 7
       },
       {
+        "titleZh": "馒头日记",
+        "titleEn": "馒头日记",
+        "titleJa": "馒头日记",
+        "score": 6.9
+      },
+      {
+        "titleZh": "神奇阿呦",
+        "titleEn": "神奇阿呦",
+        "titleJa": "神奇阿呦",
+        "score": 6.6
+      },
+      {
         "titleZh": "侠岚 鸣风篇",
         "titleEn": "侠岚 第三季",
         "titleJa": "侠岚 第三季",
@@ -11510,10 +11648,10 @@
         "score": 6.5
       },
       {
-        "titleZh": "神奇阿呦",
-        "titleEn": "神奇阿呦",
-        "titleJa": "神奇阿呦",
-        "score": 6.6
+        "titleZh": "侠岚 若星篇",
+        "titleEn": "侠岚 第四季",
+        "titleJa": "侠岚 第四季",
+        "score": 6.4
       },
       {
         "titleZh": "斗龙战士2 星龙圣域",
@@ -11522,16 +11660,34 @@
         "score": 6.3
       },
       {
-        "titleZh": "侠岚 若星篇",
-        "titleEn": "侠岚 第四季",
-        "titleJa": "侠岚 第四季",
-        "score": 6.4
+        "titleZh": "撸时代",
+        "titleEn": "撸时代",
+        "titleJa": "撸时代",
+        "score": 6.3
+      },
+      {
+        "titleZh": "十万个冷笑话 第二季",
+        "titleEn": "十万个冷笑话 第二季",
+        "titleJa": "十万个冷笑话 第二季",
+        "score": 6.2
       },
       {
         "titleZh": "电击小子 第三部",
         "titleEn": "电击小子 第三部",
         "titleJa": "电击小子 第三部",
         "score": 6.1
+      },
+      {
+        "titleZh": "啦啦啦德玛西亚 第三季",
+        "titleEn": "啦啦啦德玛西亚 第三季",
+        "titleJa": "啦啦啦德玛西亚 第三季",
+        "score": 6
+      },
+      {
+        "titleZh": "尸兄",
+        "titleEn": "尸兄",
+        "titleJa": "尸兄",
+        "score": 6
       },
       {
         "titleZh": "巴啦啦小魔仙之奇迹舞步",
@@ -11558,10 +11714,22 @@
         "score": 5.7
       },
       {
-        "titleZh": "猪猪侠之变身小英雄",
-        "titleEn": "猪猪侠之变身小英雄",
-        "titleJa": "猪猪侠之变身小英雄",
-        "score": 5.3
+        "titleZh": "超神学院",
+        "titleEn": "超神学院",
+        "titleJa": "超神学院",
+        "score": 5.6
+      },
+      {
+        "titleZh": "有神么",
+        "titleEn": "有神么",
+        "titleJa": "有神么",
+        "score": 5.5
+      },
+      {
+        "titleZh": "死灵编码 世界操纵者",
+        "titleEn": "死灵编码 世界操纵者",
+        "titleJa": "死灵编码 世界操纵者",
+        "score": 5.5
       },
       {
         "titleZh": "喜羊羊与灰太狼之开心方程式",
@@ -11576,30 +11744,84 @@
         "score": 5.4
       },
       {
-        "titleZh": "K时代",
-        "titleEn": "K时代",
-        "titleJa": "K时代",
-        "score": 1.3
+        "titleZh": "猪猪侠之变身小英雄",
+        "titleEn": "猪猪侠之变身小英雄",
+        "titleJa": "猪猪侠之变身小英雄",
+        "score": 5.3
       },
       {
-        "titleZh": "新大头儿子和小头爸爸",
-        "titleEn": "新大头儿子和小头爸爸",
-        "titleJa": "新大头儿子和小头爸爸",
-        "score": 2.6
-      },
-      {
-        "titleZh": "高铁英雄",
-        "titleEn": "トレインヒーロー",
-        "titleJa": "トレインヒーロー",
-        "score": 2.1
+        "titleZh": "超神游戏",
+        "titleEn": "超神游戏",
+        "titleJa": "超神游戏",
+        "score": 4.7
       }
     ],
     "2014": [
+      {
+        "titleZh": "功夫兔与菜包狗",
+        "titleEn": "功夫兔与菜包狗 第一季",
+        "titleJa": "功夫兔与菜包狗 第一季",
+        "score": 7.4
+      },
+      {
+        "titleZh": "天行九歌之空山鸟语",
+        "titleEn": "空山鸟语",
+        "titleJa": "空山鸟语",
+        "score": 7.1
+      },
       {
         "titleZh": "纳米神兵",
         "titleEn": "纳米神兵",
         "titleJa": "纳米神兵",
         "score": 6.7
+      },
+      {
+        "titleZh": "梦幻西游之天命之路",
+        "titleEn": "梦幻西游",
+        "titleJa": "梦幻西游",
+        "score": 6.6
+      },
+      {
+        "titleZh": "撸时代 第二季",
+        "titleEn": "撸时代 第二季",
+        "titleJa": "撸时代 第二季",
+        "score": 6.6
+      },
+      {
+        "titleZh": "口水三国",
+        "titleEn": "口水三国",
+        "titleJa": "口水三国",
+        "score": 6.6
+      },
+      {
+        "titleZh": "熊出没之年货",
+        "titleEn": "熊出没之年货",
+        "titleJa": "熊出没之年货",
+        "score": 6.5
+      },
+      {
+        "titleZh": "侠岚 凌霜篇",
+        "titleEn": "侠岚 第五季",
+        "titleJa": "侠岚 第五季",
+        "score": 6.5
+      },
+      {
+        "titleZh": "魁拔妖侠传",
+        "titleEn": "魁拔妖侠传",
+        "titleJa": "魁拔妖侠传",
+        "score": 6.5
+      },
+      {
+        "titleZh": "茶啊二中",
+        "titleEn": "茶啊二中",
+        "titleJa": "茶啊二中",
+        "score": 6.5
+      },
+      {
+        "titleZh": "画江湖之不良人",
+        "titleEn": "画江湖之不良人",
+        "titleJa": "画江湖之不良人",
+        "score": 6.5
       },
       {
         "titleZh": "夺宝幸运星第三季",
@@ -11614,10 +11836,10 @@
         "score": 6.4
       },
       {
-        "titleZh": "熊出没之年货",
-        "titleEn": "熊出没之年货",
-        "titleJa": "熊出没之年货",
-        "score": 6.5
+        "titleZh": "秦时明月之君临天下",
+        "titleEn": "秦时明月之君临天下",
+        "titleJa": "秦时明月之君临天下",
+        "score": 6.4
       },
       {
         "titleZh": "果宝特攻3",
@@ -11626,16 +11848,46 @@
         "score": 6.3
       },
       {
-        "titleZh": "正义红师",
-        "titleEn": "正义红师",
-        "titleJa": "正义红师",
-        "score": 6
+        "titleZh": "中国惊奇先生",
+        "titleEn": "中国惊奇先生",
+        "titleJa": "中国惊奇先生",
+        "score": 6.3
+      },
+      {
+        "titleZh": "妖怪名单",
+        "titleEn": "妖怪名单",
+        "titleJa": "妖怪名单",
+        "score": 6.3
+      },
+      {
+        "titleZh": "王牌御史",
+        "titleEn": "王牌御史",
+        "titleJa": "王牌御史",
+        "score": 6.3
       },
       {
         "titleZh": "熊出没之春日对对碰",
         "titleEn": "熊出没之春日对对碰",
         "titleJa": "熊出没之春日对对碰",
         "score": 6.2
+      },
+      {
+        "titleZh": "红领巾与王小明",
+        "titleEn": "红领巾与王小明",
+        "titleJa": "红领巾与王小明",
+        "score": 6.2
+      },
+      {
+        "titleZh": "秦时明月之特别篇罗生堂下",
+        "titleEn": "秦时明月之特别篇罗生堂下",
+        "titleJa": "秦时明月之特别篇罗生堂下",
+        "score": 6.2
+      },
+      {
+        "titleZh": "正义红师",
+        "titleEn": "正义红师",
+        "titleJa": "正义红师",
+        "score": 6
       },
       {
         "titleZh": "暴走恐怖故事 第一季",
@@ -11648,24 +11900,6 @@
         "titleEn": "赛尔号第3季：光明的救赎",
         "titleJa": "赛尔号第3季：光明的救赎",
         "score": 5.7
-      },
-      {
-        "titleZh": "小花仙",
-        "titleEn": "小花仙",
-        "titleJa": "小花仙",
-        "score": 4.8
-      },
-      {
-        "titleZh": "精灵梦叶罗丽",
-        "titleEn": "精灵梦叶罗丽",
-        "titleJa": "精灵梦叶罗丽",
-        "score": 4.1
-      },
-      {
-        "titleZh": "猪猪侠之变身战队",
-        "titleEn": "猪猪侠之变身战队",
-        "titleJa": "猪猪侠之变身战队",
-        "score": 4.9
       }
     ],
     "2015": [
@@ -11674,6 +11908,48 @@
         "titleEn": "京剧猫",
         "titleJa": "京剧猫",
         "score": 7.2
+      },
+      {
+        "titleZh": "高温VS排斥",
+        "titleEn": "高温VS排斥",
+        "titleJa": "高温VS排斥",
+        "score": 6.8
+      },
+      {
+        "titleZh": "梦幻西游之化境飞升",
+        "titleEn": "梦幻西游 第二季",
+        "titleJa": "梦幻西游 第二季",
+        "score": 6.7
+      },
+      {
+        "titleZh": "茶啊二中第二季",
+        "titleEn": "茶啊二中第二季",
+        "titleJa": "茶啊二中第二季",
+        "score": 6.6
+      },
+      {
+        "titleZh": "元日",
+        "titleEn": "元日",
+        "titleJa": "元日",
+        "score": 6.6
+      },
+      {
+        "titleZh": "狐妖小红娘1 下沙篇",
+        "titleEn": "狐妖小红娘 下沙篇",
+        "titleJa": "狐妖小红娘 下沙篇",
+        "score": 6.6
+      },
+      {
+        "titleZh": "画江湖之灵主",
+        "titleEn": "画江湖之灵主",
+        "titleJa": "画江湖之灵主",
+        "score": 6.5
+      },
+      {
+        "titleZh": "勇者大冒险",
+        "titleEn": "勇者大冒险",
+        "titleJa": "勇者大冒险",
+        "score": 6.5
       },
       {
         "titleZh": "百变马丁",
@@ -11688,10 +11964,28 @@
         "score": 6.3
       },
       {
-        "titleZh": "赛尔号第4季：战神风云决",
-        "titleEn": "赛尔号第4季：战神风云决",
-        "titleJa": "赛尔号第4季：战神风云决",
-        "score": 5.6
+        "titleZh": "秦时明月之帝子降兮",
+        "titleEn": "秦时明月之帝子降兮",
+        "titleJa": "秦时明月之帝子降兮",
+        "score": 6.3
+      },
+      {
+        "titleZh": "黑白无双",
+        "titleEn": "黑白无双",
+        "titleJa": "黑白无双",
+        "score": 6.3
+      },
+      {
+        "titleZh": "超神学院 第三季 神与神",
+        "titleEn": "超神学院 第三季 神与神",
+        "titleJa": "超神学院 第三季 神与神",
+        "score": 6.2
+      },
+      {
+        "titleZh": "凹凸世界",
+        "titleEn": "凹凸世界",
+        "titleJa": "凹凸世界",
+        "score": 6.2
       },
       {
         "titleZh": "熊出没之冬日乐翻天",
@@ -11700,36 +11994,150 @@
         "score": 6.1
       },
       {
-        "titleZh": "喜羊羊与灰太狼之妈妈乐疯狂",
-        "titleEn": "喜羊羊与灰太狼之妈妈乐疯狂",
-        "titleJa": "喜羊羊与灰太狼之妈妈乐疯狂",
-        "score": 4.9
+        "titleZh": "那年那兔那些事儿 第二季",
+        "titleEn": "那年那兔那些事儿 第二季",
+        "titleJa": "那年那兔那些事儿 第二季",
+        "score": 6.1
+      },
+      {
+        "titleZh": "中国惊奇先生大电影",
+        "titleEn": "中国惊奇先生大电影",
+        "titleJa": "中国惊奇先生大电影",
+        "score": 5.9
+      },
+      {
+        "titleZh": "十万个冷笑话 第三季",
+        "titleEn": "十万个冷笑话 第三季",
+        "titleJa": "十万个冷笑话 第三季",
+        "score": 5.9
+      },
+      {
+        "titleZh": "那年那兔那些事儿",
+        "titleEn": "那年那兔那些事儿",
+        "titleJa": "那年那兔那些事儿",
+        "score": 5.8
+      },
+      {
+        "titleZh": "爱神巧克力",
+        "titleEn": "爱神巧克力ing",
+        "titleJa": "爱神巧克力ing",
+        "score": 5.8
+      },
+      {
+        "titleZh": "赛尔号第4季：战神风云决",
+        "titleEn": "赛尔号第4季：战神风云决",
+        "titleJa": "赛尔号第4季：战神风云决",
+        "score": 5.6
+      },
+      {
+        "titleZh": "我叫白小飞",
+        "titleEn": "我叫白小飞",
+        "titleJa": "我叫白小飞",
+        "score": 5.6
+      },
+      {
+        "titleZh": "灵域",
+        "titleEn": "灵域",
+        "titleJa": "灵域",
+        "score": 5.4
       },
       {
         "titleZh": "猪猪侠之五灵守卫者",
         "titleEn": "猪猪侠之五灵守卫者",
         "titleJa": "猪猪侠之五灵守卫者",
         "score": 5.2
-      },
-      {
-        "titleZh": "喜羊羊与灰太狼之原始世界历险记",
-        "titleEn": "喜羊羊与灰太狼之原始世界历险记",
-        "titleJa": "喜羊羊与灰太狼之原始世界历险记",
-        "score": 4.9
-      },
-      {
-        "titleZh": "猪猪侠之百变联盟",
-        "titleEn": "猪猪侠之百变联盟",
-        "titleJa": "猪猪侠之百变联盟",
-        "score": 4.7
       }
     ],
     "2016": [
+      {
+        "titleZh": "我的三体 罗辑传",
+        "titleEn": "我的三体 罗辑传",
+        "titleJa": "我的三体 罗辑传",
+        "score": 7.8
+      },
+      {
+        "titleZh": "凸变英雄",
+        "titleEn": "凸变英雄",
+        "titleJa": "凸变英雄",
+        "score": 7.4
+      },
+      {
+        "titleZh": "雾山五行",
+        "titleEn": "雾山五行",
+        "titleJa": "雾山五行",
+        "score": 7.2
+      },
       {
         "titleZh": "京剧猫 第二章",
         "titleEn": "京剧猫 第二章",
         "titleJa": "京剧猫 第二章",
         "score": 7.1
+      },
+      {
+        "titleZh": "狐妖小红娘2 王权篇",
+        "titleEn": "狐妖小红娘 王权篇",
+        "titleJa": "狐妖小红娘 王权篇",
+        "score": 7.1
+      },
+      {
+        "titleZh": "梦幻西游之天命之战",
+        "titleEn": "梦幻西游 第四季",
+        "titleJa": "梦幻西游 第四季",
+        "score": 7.1
+      },
+      {
+        "titleZh": "相思",
+        "titleEn": "相思",
+        "titleJa": "相思",
+        "score": 7.1
+      },
+      {
+        "titleZh": "狐妖小红娘3 月红篇",
+        "titleEn": "狐妖小红娘 月红篇",
+        "titleJa": "狐妖小红娘 月红篇",
+        "score": 7
+      },
+      {
+        "titleZh": "和女儿的日常",
+        "titleEn": "和女儿的日常",
+        "titleJa": "和女儿的日常",
+        "score": 6.9
+      },
+      {
+        "titleZh": "天行九歌",
+        "titleEn": "天行九歌",
+        "titleJa": "天行九歌",
+        "score": 6.9
+      },
+      {
+        "titleZh": "勇者大冒险 第二季",
+        "titleEn": "勇者大冒险 第二季",
+        "titleJa": "勇者大冒险 第二季",
+        "score": 6.8
+      },
+      {
+        "titleZh": "镇魂街",
+        "titleEn": "镇魂街",
+        "titleJa": "镇魂街",
+        "score": 6.8
+      },
+      {
+        "titleZh": "侠岚 决敌篇",
+        "titleEn": "侠岚 第六季",
+        "titleJa": "侠岚 第六季",
+        "score": 6.7
+      },
+      {
+        "titleZh": "一人之下",
+        "titleEn": "一人之下 the outcast",
+        "titleJa": "一人之下 the outcast",
+        "score": 6.7
+      },
+      {
+        "titleZh": "茶啊二中第三季",
+        "titleEn": "茶啊二中第三季",
+        "titleJa": "茶啊二中第三季",
+        "score": 6.5
       },
       {
         "titleZh": "熊出没之秋日团团转",
@@ -11744,18 +12152,78 @@
         "score": 6.3
       },
       {
-        "titleZh": "喜羊羊与灰太狼之嘻哈闯世界",
-        "titleEn": "喜羊羊与灰太狼之嘻哈闯世界",
-        "titleJa": "喜羊羊与灰太狼之嘻哈闯世界",
-        "score": 5.6
+        "titleZh": "那年那兔那些事儿 抗美援朝番外篇",
+        "titleEn": "那年那兔那些事儿 番外篇",
+        "titleJa": "那年那兔那些事儿 番外篇",
+        "score": 6.3
+      },
+      {
+        "titleZh": "山口山战记-太阳井",
+        "titleEn": "山口山战记 第七季",
+        "titleJa": "山口山战记 第七季",
+        "score": 6.2
+      },
+      {
+        "titleZh": "武庚纪之逆天之决",
+        "titleEn": "武庚纪",
+        "titleJa": "武庚纪",
+        "score": 6.2
+      },
+      {
+        "titleZh": "超神学院 第四季 黑甲",
+        "titleEn": "超神学院 第四季 黑甲",
+        "titleJa": "超神学院 第四季 黑甲",
+        "score": 6.2
+      },
+      {
+        "titleZh": "画江湖之不良人 第二季",
+        "titleEn": "画江湖之不良人Ⅱ",
+        "titleJa": "画江湖之不良人Ⅱ",
+        "score": 6.2
+      },
+      {
+        "titleZh": "女生宿舍日常",
+        "titleEn": "女生宿舍日常",
+        "titleJa": "女生宿舍日常",
+        "score": 6.1
+      },
+      {
+        "titleZh": "墓王之王 麒麟决",
+        "titleEn": "墓王之王 麒麟决",
+        "titleJa": "墓王之王 麒麟决",
+        "score": 6
       }
     ],
     "2017": [
+      {
+        "titleZh": "风灵玉秀",
+        "titleEn": "风灵玉秀",
+        "titleJa": "风灵玉秀",
+        "score": 7.3
+      },
       {
         "titleZh": "京剧猫之信念的冒险",
         "titleEn": "京剧猫之信念的冒险",
         "titleJa": "京剧猫之信念的冒险",
         "score": 7.2
+      },
+      {
+        "titleZh": "饮湖上初晴后雨",
+        "titleEn": "饮湖上初晴后雨",
+        "titleJa": "饮湖上初晴后雨",
+        "score": 7.1
+      },
+      {
+        "titleZh": "一人之下 第二季",
+        "titleEn": "一人之下 the outcast 2",
+        "titleJa": "一人之下 the outcast 2",
+        "score": 7.1
+      },
+      {
+        "titleZh": "Gon的旱獭",
+        "titleEn": "Gon的旱獭",
+        "titleJa": "Gon的旱獭",
+        "score": 7
       },
       {
         "titleZh": "狐妖小红娘 日语版",
@@ -11764,28 +12232,112 @@
         "score": 6.8
       },
       {
+        "titleZh": "游子吟",
+        "titleEn": "游子吟",
+        "titleJa": "游子吟",
+        "score": 6.8
+      },
+      {
+        "titleZh": "狐妖小红娘4 千颜篇",
+        "titleEn": "狐妖小红娘 千颜篇",
+        "titleJa": "狐妖小红娘 千颜篇",
+        "score": 6.8
+      },
+      {
+        "titleZh": "少年锦衣卫",
+        "titleEn": "少年锦衣卫",
+        "titleJa": "少年锦衣卫",
+        "score": 6.6
+      },
+      {
+        "titleZh": "斗破苍穹 特别篇",
+        "titleEn": "斗破苍穹 特别篇",
+        "titleJa": "斗破苍穹 特别篇",
+        "score": 6.6
+      },
+      {
+        "titleZh": "我是江小白",
+        "titleEn": "我是江小白",
+        "titleJa": "我是江小白",
+        "score": 6.5
+      },
+      {
+        "titleZh": "快把我哥带走",
+        "titleEn": "快把我哥带走",
+        "titleJa": "快把我哥带走",
+        "score": 6.5
+      },
+      {
+        "titleZh": "妖怪名单 第二季",
+        "titleEn": "妖怪名单 第二季",
+        "titleJa": "妖怪名单 第二季",
+        "score": 6.5
+      },
+      {
+        "titleZh": "狐妖小红娘5 南国篇",
+        "titleEn": "狐妖小红娘 南国篇",
+        "titleJa": "狐妖小红娘 南国篇",
+        "score": 6.5
+      },
+      {
+        "titleZh": "开封奇谈-这个包公不太行",
+        "titleEn": "开封奇谈-这个包公不太行",
+        "titleJa": "开封奇谈-这个包公不太行",
+        "score": 6.3
+      },
+      {
+        "titleZh": "武庚纪之天启",
+        "titleEn": "武庚纪Ⅱ 天启",
+        "titleJa": "武庚纪Ⅱ 天启",
+        "score": 6.3
+      },
+      {
+        "titleZh": "全职高手",
+        "titleEn": "全职高手",
+        "titleJa": "全职高手",
+        "score": 6.3
+      },
+      {
+        "titleZh": "画江湖之换世门生",
+        "titleEn": "画江湖之换世门生",
+        "titleJa": "画江湖之换世门生",
+        "score": 6.2
+      },
+      {
+        "titleZh": "雄兵连之雄芯篇",
+        "titleEn": "雄兵连之雄芯篇",
+        "titleJa": "雄兵连之雄芯篇",
+        "score": 6.2
+      },
+      {
+        "titleZh": "降灵记",
+        "titleEn": "降灵记",
+        "titleJa": "降灵记",
+        "score": 6.2
+      },
+      {
+        "titleZh": "万古仙穹",
+        "titleEn": "万古仙穹",
+        "titleJa": "万古仙穹",
+        "score": 6.1
+      },
+      {
+        "titleZh": "口水三国 第二季",
+        "titleEn": "口水三国 第二季",
+        "titleJa": "口水三国 第二季",
+        "score": 6.1
+      },
+      {
         "titleZh": "熊出没之探险日记",
         "titleEn": "熊出没之探险日记",
         "titleJa": "熊出没之探险日记",
         "score": 5.9
       },
       {
-        "titleZh": "喜羊羊与灰太狼之深海历险记",
-        "titleEn": "喜羊羊与灰太狼之深海历险记",
-        "titleJa": "喜羊羊与灰太狼之深海历险记",
-        "score": 5.4
-      },
-      {
-        "titleZh": "果宝特攻4之铠之魂",
-        "titleEn": "果宝特攻4之铠之魂",
-        "titleJa": "果宝特攻4之铠之魂",
-        "score": 4.7
-      },
-      {
-        "titleZh": "熊熊乐园",
-        "titleEn": "熊熊乐园",
-        "titleJa": "熊熊乐园",
-        "score": 4.1
+        "titleZh": "理想禁区",
+        "titleEn": "理想禁区",
+        "titleJa": "理想禁区",
+        "score": 5.9
       }
     ],
     "2018": [
@@ -11796,36 +12348,192 @@
         "score": 7.5
       },
       {
-        "titleZh": "喜羊羊与灰太狼之奇幻天空岛",
-        "titleEn": "喜羊羊与灰太狼之奇幻天空岛",
-        "titleJa": "喜羊羊与灰太狼之奇幻天空岛",
-        "score": 5.3
+        "titleZh": "刺客伍六七",
+        "titleEn": "刺客伍六七",
+        "titleJa": "刺客伍六七",
+        "score": 7.3
       },
       {
-        "titleZh": "我是江小白 第二季",
-        "titleEn": "我是江小白 第二季",
-        "titleJa": "我是江小白 第二季",
-        "score": 5.6
+        "titleZh": "夜思",
+        "titleEn": "夜思",
+        "titleJa": "夜思",
+        "score": 7.2
       },
       {
-        "titleZh": "实验品家庭",
-        "titleEn": "實驗品家庭",
-        "titleJa": "實驗品家庭",
-        "score": 5.3
+        "titleZh": "剑网3·侠肝义胆沈剑心",
+        "titleEn": "剑网3·侠肝义胆沈剑心",
+        "titleJa": "剑网3·侠肝义胆沈剑心",
+        "score": 7.1
       },
       {
-        "titleZh": "神兵小将2",
-        "titleEn": "神兵小将2",
-        "titleJa": "神兵小将2",
-        "score": 1.9
+        "titleZh": "非人哉 第二部分",
+        "titleEn": "非人哉 第二部分",
+        "titleJa": "非人哉 第二部分",
+        "score": 7.1
+      },
+      {
+        "titleZh": "0号宿舍",
+        "titleEn": "〇号宿舍",
+        "titleJa": "〇号宿舍",
+        "score": 7.1
+      },
+      {
+        "titleZh": "非人哉",
+        "titleEn": "非人哉",
+        "titleJa": "非人哉",
+        "score": 7.1
+      },
+      {
+        "titleZh": "少年歌行",
+        "titleEn": "少年歌行",
+        "titleJa": "少年歌行",
+        "score": 7
+      },
+      {
+        "titleZh": "Gon的旱獭 第二季",
+        "titleEn": "Gon的旱獭 第二季",
+        "titleJa": "Gon的旱獭 第二季",
+        "score": 6.9
+      },
+      {
+        "titleZh": "茶啊二中第四季",
+        "titleEn": "茶啊二中第四季",
+        "titleJa": "茶啊二中第四季",
+        "score": 6.9
+      },
+      {
+        "titleZh": "迷域行者",
+        "titleEn": "迷域行者",
+        "titleJa": "迷域行者",
+        "score": 6.9
+      },
+      {
+        "titleZh": "请吃红小豆吧！",
+        "titleEn": "请吃红小豆吧！",
+        "titleJa": "请吃红小豆吧！",
+        "score": 6.9
+      },
+      {
+        "titleZh": "画江湖之不良人 第三季",
+        "titleEn": "画江湖之不良人Ⅲ",
+        "titleJa": "画江湖之不良人Ⅲ",
+        "score": 6.8
+      },
+      {
+        "titleZh": "魔道祖师 前尘篇",
+        "titleEn": "魔道祖师",
+        "titleJa": "魔道祖师",
+        "score": 6.8
+      },
+      {
+        "titleZh": "如果历史是一群喵 夏商西周篇",
+        "titleEn": "如果历史是一群喵 夏商西周篇",
+        "titleJa": "如果历史是一群喵 夏商西周篇",
+        "score": 6.7
+      },
+      {
+        "titleZh": "小绿和小蓝",
+        "titleEn": "小绿和小蓝",
+        "titleJa": "小绿和小蓝",
+        "score": 6.6
+      },
+      {
+        "titleZh": "快把我哥带走2",
+        "titleEn": "快把我哥带走2",
+        "titleJa": "快把我哥带走2",
+        "score": 6.5
+      },
+      {
+        "titleZh": "全职高手 特别篇",
+        "titleEn": "全职高手 特别篇",
+        "titleJa": "全职高手 特别篇",
+        "score": 6.5
+      },
+      {
+        "titleZh": "凸变英雄 LEAF",
+        "titleEn": "凸变英雄 LEAF",
+        "titleJa": "凸变英雄 LEAF",
+        "score": 6.4
+      },
+      {
+        "titleZh": "雄兵连之乾坤篇",
+        "titleEn": "雄兵连之乾坤篇",
+        "titleJa": "雄兵连之乾坤篇",
+        "score": 6.3
+      },
+      {
+        "titleZh": "萌妻食神",
+        "titleEn": "萌妻食神",
+        "titleJa": "萌妻食神",
+        "score": 6.3
+      },
+      {
+        "titleZh": "雪鹰领主",
+        "titleEn": "雪鹰领主",
+        "titleJa": "雪鹰领主",
+        "score": 6.1
+      },
+      {
+        "titleZh": "西行纪",
+        "titleEn": "西行纪",
+        "titleJa": "西行纪",
+        "score": 6.1
+      },
+      {
+        "titleZh": "喂，看见耳朵啦",
+        "titleEn": "喂，看见耳朵啦",
+        "titleJa": "喂，看见耳朵啦",
+        "score": 6.1
       }
     ],
     "2019": [
+      {
+        "titleZh": "万国志",
+        "titleEn": "万国志",
+        "titleJa": "万国志",
+        "score": 7.3
+      },
       {
         "titleZh": "喜羊羊与灰太狼之跨时空救兵",
         "titleEn": "喜羊羊与灰太狼之跨时空救兵",
         "titleJa": "喜羊羊与灰太狼之跨时空救兵",
         "score": 7.2
+      },
+      {
+        "titleZh": "狐妖小红娘6 竹业篇",
+        "titleEn": "狐妖小红娘 竹业篇",
+        "titleJa": "狐妖小红娘 竹业篇",
+        "score": 7.2
+      },
+      {
+        "titleZh": "伍六七之最强发型师",
+        "titleEn": "伍六七之最强发型师",
+        "titleJa": "伍六七之最强发型师",
+        "score": 7.2
+      },
+      {
+        "titleZh": "请吃红小豆吧！外传 莫相忘",
+        "titleEn": "请吃红小豆吧！外传 莫相忘",
+        "titleJa": "请吃红小豆吧！外传 莫相忘",
+        "score": 7.1
+      },
+      {
+        "titleZh": "斗破苍穹 特别篇2 沙之澜歌",
+        "titleEn": "斗破苍穹 特别篇2 沙之澜歌",
+        "titleJa": "斗破苍穹 特别篇2 沙之澜歌",
+        "score": 7
+      },
+      {
+        "titleZh": "剑网3·侠肝义胆沈剑心 第二季",
+        "titleEn": "剑网3·侠肝义胆沈剑心Ⅱ",
+        "titleJa": "剑网3·侠肝义胆沈剑心Ⅱ",
+        "score": 6.9
+      },
+      {
+        "titleZh": "汉化日记",
+        "titleEn": "汉化日记",
+        "titleJa": "汉化日记",
+        "score": 6.9
       },
       {
         "titleZh": "巨兵长城传",
@@ -11834,13 +12542,223 @@
         "score": 6.8
       },
       {
+        "titleZh": "天行九歌 第二部分",
+        "titleEn": "天行九歌 第二部分",
+        "titleJa": "天行九歌 第二部分",
+        "score": 6.8
+      },
+      {
+        "titleZh": "一人之下 第二季 番外篇 天师下山",
+        "titleEn": "一人之下 the outcast 2 番外篇",
+        "titleJa": "一人之下 the outcast 2 番外篇",
+        "score": 6.8
+      },
+      {
+        "titleZh": "请吃红小豆吧！ 第二季",
+        "titleEn": "请吃红小豆吧！ 第二季",
+        "titleJa": "请吃红小豆吧！ 第二季",
+        "score": 6.8
+      },
+      {
+        "titleZh": "灵笼 中章",
+        "titleEn": "灵笼:INCARNATION 中章",
+        "titleJa": "灵笼:INCARNATION 中章",
+        "score": 6.8
+      },
+      {
+        "titleZh": "魔道祖师 羡云篇",
+        "titleEn": "魔道祖师 羡云篇",
+        "titleJa": "魔道祖师 羡云篇",
+        "score": 6.8
+      },
+      {
+        "titleZh": "灵笼 上半季",
+        "titleEn": "灵笼:INCARNATION 上半季",
+        "titleJa": "灵笼:INCARNATION 上半季",
+        "score": 6.7
+      },
+      {
+        "titleZh": "如果历史是一群喵 春秋战国篇",
+        "titleEn": "如果历史是一群喵 春秋战国篇",
+        "titleJa": "如果历史是一群喵 春秋战国篇",
+        "score": 6.6
+      },
+      {
+        "titleZh": "快把我哥带走3",
+        "titleEn": "快把我哥带走3",
+        "titleJa": "快把我哥带走3",
+        "score": 6.6
+      },
+      {
         "titleZh": "喜羊羊与灰太狼之羊村守护者",
         "titleEn": "喜羊羊与灰太狼之羊村守护者",
         "titleJa": "喜羊羊与灰太狼之羊村守护者",
         "score": 6.5
+      },
+      {
+        "titleZh": "喂，看见耳朵啦 第二季",
+        "titleEn": "喂，看见耳朵啦 第二季",
+        "titleJa": "喂，看见耳朵啦 第二季",
+        "score": 6.4
+      },
+      {
+        "titleZh": "武庚纪之三界",
+        "titleEn": "武庚纪Ⅲ",
+        "titleJa": "武庚纪Ⅲ",
+        "score": 6.4
+      },
+      {
+        "titleZh": "西行纪之集结篇",
+        "titleEn": "西行纪之集结篇",
+        "titleJa": "西行纪之集结篇",
+        "score": 6.4
+      },
+      {
+        "titleZh": "如果历史是一群喵 秦楚两汉篇",
+        "titleEn": "如果历史是一群喵 秦楚两汉篇",
+        "titleJa": "如果历史是一群喵 秦楚两汉篇",
+        "score": 6.4
+      },
+      {
+        "titleZh": "雄兵连2诸天降临",
+        "titleEn": "雄兵连Ⅱ诸天降临",
+        "titleJa": "雄兵连Ⅱ诸天降临",
+        "score": 6.4
+      },
+      {
+        "titleZh": "斗破苍穹 第三季",
+        "titleEn": "斗破苍穹 第三季",
+        "titleJa": "斗破苍穹 第三季",
+        "score": 6.4
       }
     ],
     "2020": [
+      {
+        "titleZh": "我的三体 章北海传",
+        "titleEn": "我的三体 章北海传",
+        "titleJa": "我的三体 章北海传",
+        "score": 8.3
+      },
+      {
+        "titleZh": "雾山五行",
+        "titleEn": "雾山五行",
+        "titleJa": "雾山五行",
+        "score": 7.6
+      },
+      {
+        "titleZh": "风雨廊桥",
+        "titleEn": "风雨廊桥",
+        "titleJa": "风雨廊桥",
+        "score": 7.4
+      },
+      {
+        "titleZh": "京剧猫之脚踏实地",
+        "titleEn": "京剧猫之脚踏实地",
+        "titleJa": "京剧猫之脚踏实地",
+        "score": 7.3
+      },
+      {
+        "titleZh": "大理寺日志",
+        "titleEn": "大理寺日志",
+        "titleJa": "大理寺日志",
+        "score": 7.2
+      },
+      {
+        "titleZh": "非人哉 49-60集",
+        "titleEn": "非人哉 Part.3",
+        "titleJa": "非人哉 Part.3",
+        "score": 7.2
+      },
+      {
+        "titleZh": "汉化日记 第二季",
+        "titleEn": "汉化日记 第二季",
+        "titleJa": "汉化日记 第二季",
+        "score": 7.1
+      },
+      {
+        "titleZh": "灵笼 下半季",
+        "titleEn": "灵笼:INCARNATION 下半季",
+        "titleJa": "灵笼:INCARNATION 下半季",
+        "score": 7.1
+      },
+      {
+        "titleZh": "非人哉 61-72集",
+        "titleEn": "非人哉 Part.4",
+        "titleJa": "非人哉 Part.4",
+        "score": 7
+      },
+      {
+        "titleZh": "凡人修仙传之凡人风起天南 贰",
+        "titleEn": "凡人修仙传之凡人风起天南 贰",
+        "titleJa": "凡人修仙传之凡人风起天南 贰",
+        "score": 6.9
+      },
+      {
+        "titleZh": "一人之下3·入世篇",
+        "titleEn": "一人之下3·入世篇",
+        "titleJa": "一人之下3·入世篇",
+        "score": 6.9
+      },
+      {
+        "titleZh": "万圣街 第二季",
+        "titleEn": "万圣街 第二季",
+        "titleJa": "万圣街 第二季",
+        "score": 6.8
+      },
+      {
+        "titleZh": "一念永恒",
+        "titleEn": "一念永恒",
+        "titleJa": "一念永恒",
+        "score": 6.8
+      },
+      {
+        "titleZh": "万圣街",
+        "titleEn": "万圣街",
+        "titleJa": "万圣街",
+        "score": 6.8
+      },
+      {
+        "titleZh": "凡人修仙传之凡人风起天南",
+        "titleEn": "凡人修仙传之凡人风起天南",
+        "titleJa": "凡人修仙传之凡人风起天南",
+        "score": 6.8
+      },
+      {
+        "titleZh": "剑网3·侠肝义胆沈剑心之长漂",
+        "titleEn": "剑网3·侠肝义胆沈剑心之长漂",
+        "titleJa": "剑网3·侠肝义胆沈剑心之长漂",
+        "score": 6.7
+      },
+      {
+        "titleZh": "请吃红小豆吧！ 第四季",
+        "titleEn": "请吃红小豆吧！ 第四季",
+        "titleJa": "请吃红小豆吧！ 第四季",
+        "score": 6.7
+      },
+      {
+        "titleZh": "功夫兔与菜包狗 第二季",
+        "titleEn": "功夫兔与菜包狗 第二季",
+        "titleJa": "功夫兔与菜包狗 第二季",
+        "score": 6.7
+      },
+      {
+        "titleZh": "请吃红小豆吧！ 第三季",
+        "titleEn": "请吃红小豆吧！ 第三季",
+        "titleJa": "请吃红小豆吧！ 第三季",
+        "score": 6.7
+      },
+      {
+        "titleZh": "獭獭突然想到",
+        "titleEn": "Gon的旱獭之獭獭突然想到",
+        "titleJa": "Gon的旱獭之獭獭突然想到",
+        "score": 6.6
+      },
+      {
+        "titleZh": "百妖谱",
+        "titleEn": "百妖谱",
+        "titleJa": "百妖谱",
+        "score": 6.6
+      },
       {
         "titleZh": "喜羊羊与灰太狼之异国大营救",
         "titleEn": "喜羊羊与灰太狼之异国大营救",
@@ -11848,19 +12766,109 @@
         "score": 6.5
       },
       {
-        "titleZh": "雏蜂 伊甸之子",
-        "titleEn": "雏蜂 伊甸之子",
-        "titleJa": "雏蜂 伊甸之子",
-        "score": 5.6
+        "titleZh": "有药",
+        "titleEn": "有药",
+        "titleJa": "有药",
+        "score": 6.5
       },
       {
-        "titleZh": "喜羊羊与灰太狼之奇趣外星客",
-        "titleEn": "喜羊羊与灰太狼之奇趣外星客",
-        "titleJa": "喜羊羊与灰太狼之奇趣外星客",
-        "score": 5.4
+        "titleZh": "异常生物见闻录 特别篇",
+        "titleEn": "异常生物见闻录 特别篇",
+        "titleJa": "异常生物见闻录 特别篇",
+        "score": 6.4
       }
     ],
     "2021": [
+      {
+        "titleZh": "罗小黑战记 众生之门篇",
+        "titleEn": "罗小黑战记 众生之门篇",
+        "titleJa": "罗小黑战记 众生之门篇",
+        "score": 7.8
+      },
+      {
+        "titleZh": "画江湖之不良人 第四季",
+        "titleEn": "画江湖之不良人Ⅳ",
+        "titleJa": "画江湖之不良人Ⅳ",
+        "score": 7.7
+      },
+      {
+        "titleZh": "凡人修仙传 年番",
+        "titleEn": "凡人修仙传 年番",
+        "titleJa": "凡人修仙传 年番",
+        "score": 7.4
+      },
+      {
+        "titleZh": "枕刀歌",
+        "titleEn": "枕刀歌",
+        "titleJa": "枕刀歌",
+        "score": 7.4
+      },
+      {
+        "titleZh": "斗破苍穹 特别篇3 三年之约",
+        "titleEn": "斗破苍穹 特别篇3 三年之约",
+        "titleJa": "斗破苍穹 特别篇3 三年之约",
+        "score": 7.3
+      },
+      {
+        "titleZh": "时光代理人",
+        "titleEn": "时光代理人",
+        "titleJa": "时光代理人",
+        "score": 7.3
+      },
+      {
+        "titleZh": "枕刀歌 特别篇",
+        "titleEn": "枕刀歌 特别篇",
+        "titleJa": "枕刀歌 特别篇",
+        "score": 7.3
+      },
+      {
+        "titleZh": "灵笼:INCARNATION 特别篇",
+        "titleEn": "灵笼:INCARNATION 特别篇",
+        "titleJa": "灵笼:INCARNATION 特别篇",
+        "score": 7.2
+      },
+      {
+        "titleZh": "一人之下4 出发！碧游村",
+        "titleEn": "一人之下4 出发！碧游村",
+        "titleJa": "一人之下4 出发！碧游村",
+        "score": 7.1
+      },
+      {
+        "titleZh": "非人哉 85-96集",
+        "titleEn": "非人哉 Part.6",
+        "titleJa": "非人哉 Part.6",
+        "score": 7
+      },
+      {
+        "titleZh": "少年歌行 风花雪月篇 上部",
+        "titleEn": "少年歌行 风花雪月篇 上部",
+        "titleJa": "少年歌行 风花雪月篇 上部",
+        "score": 7
+      },
+      {
+        "titleZh": "非人哉 73-84集",
+        "titleEn": "非人哉 Part.5",
+        "titleJa": "非人哉 Part.5",
+        "score": 7
+      },
+      {
+        "titleZh": "山河剑心",
+        "titleEn": "山河剑心",
+        "titleJa": "山河剑心",
+        "score": 6.9
+      },
+      {
+        "titleZh": "眷思量",
+        "titleEn": "眷思量",
+        "titleJa": "眷思量",
+        "score": 6.9
+      },
+      {
+        "titleZh": "凡人修仙传 特别篇：燕家堡之战",
+        "titleEn": "凡人修仙传 特别篇：燕家堡之战",
+        "titleJa": "凡人修仙传 特别篇：燕家堡之战",
+        "score": 6.9
+      },
       {
         "titleZh": "喜羊羊与灰太狼之筐出胜利",
         "titleEn": "喜羊羊与灰太狼之筐出胜利",
@@ -11868,10 +12876,52 @@
         "score": 6.8
       },
       {
-        "titleZh": "喜羊羊与灰太狼之决战次时代",
-        "titleEn": "喜羊羊与灰太狼之决战次时代",
-        "titleJa": "喜羊羊与灰太狼之决战次时代",
-        "score": 6.3
+        "titleZh": "百妖谱 第二季",
+        "titleEn": "百妖谱 第二季",
+        "titleJa": "百妖谱 第二季",
+        "score": 6.8
+      },
+      {
+        "titleZh": "伍六七之玄武国篇 下篇",
+        "titleEn": "伍六七之玄武国篇 下篇",
+        "titleJa": "伍六七之玄武国篇 下篇",
+        "score": 6.8
+      },
+      {
+        "titleZh": "伍六七之玄武国篇 上篇",
+        "titleEn": "伍六七之玄武国篇 上篇",
+        "titleJa": "伍六七之玄武国篇 上篇",
+        "score": 6.8
+      },
+      {
+        "titleZh": "魔道祖师 完结篇",
+        "titleEn": "魔道祖师 完结篇",
+        "titleJa": "魔道祖师 完结篇",
+        "score": 6.7
+      },
+      {
+        "titleZh": "狐妖小红娘·月红2",
+        "titleEn": "狐妖小红娘·月红2",
+        "titleJa": "狐妖小红娘·月红2",
+        "score": 6.7
+      },
+      {
+        "titleZh": "灵笼:INCARNATION 终章",
+        "titleEn": "灵笼:INCARNATION 终章",
+        "titleJa": "灵笼:INCARNATION 终章",
+        "score": 6.7
+      },
+      {
+        "titleZh": "绝顶",
+        "titleEn": "绝顶",
+        "titleJa": "绝顶",
+        "score": 6.6
+      },
+      {
+        "titleZh": "天宝伏妖录 第二季",
+        "titleEn": "天宝伏妖录 第二季",
+        "titleJa": "天宝伏妖录 第二季",
+        "score": 6.6
       }
     ],
     "2022": [
@@ -11882,24 +12932,618 @@
         "score": 7.5
       },
       {
+        "titleZh": "画江湖之不良人 第五季",
+        "titleEn": "画江湖之不良人Ⅴ",
+        "titleJa": "画江湖之不良人Ⅴ",
+        "score": 7.5
+      },
+      {
+        "titleZh": "枕刀歌之尘世行",
+        "titleEn": "枕刀歌之尘世行",
+        "titleJa": "枕刀歌之尘世行",
+        "score": 7.3
+      },
+      {
+        "titleZh": "一人之下5 决战！碧游村",
+        "titleEn": "一人之下5 决战！碧游村",
+        "titleJa": "一人之下5 决战！碧游村",
+        "score": 7.3
+      },
+      {
+        "titleZh": "大理寺日志 贰",
+        "titleEn": "大理寺日志 贰",
+        "titleJa": "大理寺日志 贰",
+        "score": 7.1
+      },
+      {
+        "titleZh": "剑网3·侠肝义胆沈剑心 第三季（上卷）",
+        "titleEn": "剑网3·侠肝义胆沈剑心 第三季（上卷）",
+        "titleJa": "剑网3·侠肝义胆沈剑心 第三季（上卷）",
+        "score": 7.1
+      },
+      {
+        "titleZh": "百妖谱·京师篇",
+        "titleEn": "百妖谱·京师篇",
+        "titleJa": "百妖谱·京师篇",
+        "score": 7
+      },
+      {
+        "titleZh": "万圣街 第三季",
+        "titleEn": "万圣街 第三季",
+        "titleJa": "万圣街 第三季",
+        "score": 6.9
+      },
+      {
+        "titleZh": "非人哉 第二季",
+        "titleEn": "非人哉 第二季",
+        "titleJa": "非人哉 第二季",
+        "score": 6.9
+      },
+      {
+        "titleZh": "黑门",
+        "titleEn": "黑门",
+        "titleJa": "黑门",
+        "score": 6.8
+      },
+      {
+        "titleZh": "咏梅",
+        "titleEn": "咏梅",
+        "titleJa": "咏梅",
+        "score": 6.7
+      },
+      {
+        "titleZh": "少年歌行 风花雪月篇 下部",
+        "titleEn": "少年歌行 风花雪月篇 下部",
+        "titleJa": "少年歌行 风花雪月篇 下部",
+        "score": 6.7
+      },
+      {
+        "titleZh": "一念永恒 第二季",
+        "titleEn": "一念永恒 第二季",
+        "titleJa": "一念永恒 第二季",
+        "score": 6.7
+      },
+      {
+        "titleZh": "汉化日记 第三季",
+        "titleEn": "汉化日记 第三季",
+        "titleJa": "汉化日记 第三季",
+        "score": 6.7
+      },
+      {
         "titleZh": "罗小黑战记 我选择的未来",
         "titleEn": "羅小黒戦記 ぼくが選ぶ未来",
         "titleJa": "羅小黒戦記 ぼくが選ぶ未来",
         "score": 6.6
       },
       {
-        "titleZh": "新围棋少年",
-        "titleEn": "新围棋少年",
-        "titleJa": "新围棋少年",
-        "score": 2.5
+        "titleZh": "血与心",
+        "titleEn": "血与心",
+        "titleJa": "血与心",
+        "score": 6.6
+      },
+      {
+        "titleZh": "快把我哥带走5",
+        "titleEn": "快把我哥带走5",
+        "titleJa": "快把我哥带走5",
+        "score": 6.6
+      },
+      {
+        "titleZh": "完美世界 第三季",
+        "titleEn": "完美世界 第三季",
+        "titleJa": "完美世界 第三季",
+        "score": 6.6
+      },
+      {
+        "titleZh": "胶囊计划",
+        "titleEn": "胶囊计划",
+        "titleJa": "胶囊计划",
+        "score": 6.6
+      },
+      {
+        "titleZh": "请吃红小豆吧！第0.5季",
+        "titleEn": "请吃红小豆吧！第0.5季",
+        "titleJa": "请吃红小豆吧！第0.5季",
+        "score": 6.5
+      },
+      {
+        "titleZh": "君有云",
+        "titleEn": "君有云",
+        "titleJa": "君有云",
+        "score": 6.5
+      },
+      {
+        "titleZh": "千从狩",
+        "titleEn": "千从狩",
+        "titleJa": "千从狩",
+        "score": 6.5
+      },
+      {
+        "titleZh": "独行月球",
+        "titleEn": "独行月球",
+        "titleJa": "独行月球",
+        "score": 6.4
+      },
+      {
+        "titleZh": "两不疑 第二季",
+        "titleEn": "两不疑 第二季",
+        "titleJa": "两不疑 第二季",
+        "score": 6.4
+      }
+    ],
+    "2023": [
+      {
+        "titleZh": "画江湖之不良人 第六季",
+        "titleEn": "画江湖之不良人Ⅵ",
+        "titleJa": "画江湖之不良人Ⅵ",
+        "score": 8
+      },
+      {
+        "titleZh": "凡人修仙传 新年番",
+        "titleEn": "凡人修仙传 新年番",
+        "titleJa": "凡人修仙传 新年番",
+        "score": 7.8
+      },
+      {
+        "titleZh": "枕刀歌之将军卸印",
+        "titleEn": "枕刀歌2：将军卸印",
+        "titleJa": "枕刀歌2：将军卸印",
+        "score": 7.7
+      },
+      {
+        "titleZh": "雾山五行 犀川幻紫林",
+        "titleEn": "雾山五行 犀川幻紫林",
+        "titleJa": "雾山五行 犀川幻紫林",
+        "score": 7.6
+      },
+      {
+        "titleZh": "画江湖之天罡",
+        "titleEn": "画江湖之天罡",
+        "titleJa": "画江湖之天罡",
+        "score": 7.6
+      },
+      {
+        "titleZh": "凡人修仙传 星海飞驰篇 序章",
+        "titleEn": "凡人修仙传 星海飞驰篇 序章",
+        "titleJa": "凡人修仙传 星海飞驰篇 序章",
+        "score": 7.4
+      },
+      {
+        "titleZh": "师兄啊师兄 第二季",
+        "titleEn": "师兄啊师兄 第二季",
+        "titleJa": "师兄啊师兄 第二季",
+        "score": 7.3
+      },
+      {
+        "titleZh": "火凤燎原",
+        "titleEn": "火凤燎原",
+        "titleJa": "火凤燎原",
+        "score": 7.2
+      },
+      {
+        "titleZh": "沧元图",
+        "titleEn": "沧元图",
+        "titleJa": "沧元图",
+        "score": 7.2
+      },
+      {
+        "titleZh": "有兽焉 第二季",
+        "titleEn": "有兽焉 第二季",
+        "titleJa": "有兽焉 第二季",
+        "score": 7
+      },
+      {
+        "titleZh": "万圣街 第四季",
+        "titleEn": "万圣街 第四季",
+        "titleJa": "万圣街 第四季",
+        "score": 6.9
+      },
+      {
+        "titleZh": "黄金庭院：冬日里的新年愿望",
+        "titleEn": "黄金庭院：冬日里的新年愿望",
+        "titleJa": "黄金庭院：冬日里的新年愿望",
+        "score": 6.9
+      },
+      {
+        "titleZh": "非人哉 第二季 13-24集",
+        "titleEn": "非人哉 第二季 Part.2",
+        "titleJa": "非人哉 第二季 Part.2",
+        "score": 6.8
+      },
+      {
+        "titleZh": "狐妖小红娘11 无暮篇",
+        "titleEn": "狐妖小红娘 无暮篇",
+        "titleJa": "狐妖小红娘 无暮篇",
+        "score": 6.8
+      },
+      {
+        "titleZh": "中国奇谭",
+        "titleEn": "中国奇谭",
+        "titleJa": "中国奇谭",
+        "score": 6.8
+      },
+      {
+        "titleZh": "猫之茗 第二季",
+        "titleEn": "猫之茗 第二季",
+        "titleJa": "猫之茗 第二季",
+        "score": 6.7
+      },
+      {
+        "titleZh": "有兽焉",
+        "titleEn": "有兽焉",
+        "titleJa": "有兽焉",
+        "score": 6.7
+      },
+      {
+        "titleZh": "师兄啊师兄",
+        "titleEn": "师兄啊师兄",
+        "titleJa": "师兄啊师兄",
+        "score": 6.7
+      },
+      {
+        "titleZh": "仙逆",
+        "titleEn": "仙逆",
+        "titleJa": "仙逆",
+        "score": 6.7
+      },
+      {
+        "titleZh": "小刻的画图写话",
+        "titleEn": "小刻的画图写话",
+        "titleJa": "小刻的画图写话",
+        "score": 6.6
+      },
+      {
+        "titleZh": "火星西路7号",
+        "titleEn": "火星西路7号",
+        "titleJa": "火星西路7号",
+        "score": 6.5
+      },
+      {
+        "titleZh": "大王饶命 第二季",
+        "titleEn": "大王饶命 第二季",
+        "titleJa": "大王饶命 第二季",
+        "score": 6.5
+      },
+      {
+        "titleZh": "吞噬星空 宇宙篇",
+        "titleEn": "吞噬星空 宇宙篇",
+        "titleJa": "吞噬星空 宇宙篇",
+        "score": 6.5
+      },
+      {
+        "titleZh": "左手上篮",
+        "titleEn": "左手上篮",
+        "titleJa": "左手上篮",
+        "score": 6.2
+      }
+    ],
+    "2024": [
+      {
+        "titleZh": "剑来",
+        "titleEn": "剑来",
+        "titleJa": "剑来",
+        "score": 7.5
+      },
+      {
+        "titleZh": "良辰有梦",
+        "titleEn": "良辰有梦",
+        "titleJa": "良辰有梦",
+        "score": 7.3
+      },
+      {
+        "titleZh": "有兽焉 第三季",
+        "titleEn": "有兽焉 第三季",
+        "titleJa": "有兽焉 第三季",
+        "score": 7.3
+      },
+      {
+        "titleZh": "成何体统",
+        "titleEn": "成何体统",
+        "titleJa": "成何体统",
+        "score": 7.2
+      },
+      {
+        "titleZh": "咸鱼哥 第二季",
+        "titleEn": "咸鱼哥 第二季",
+        "titleJa": "咸鱼哥 第二季",
+        "score": 7.1
+      },
+      {
+        "titleZh": "仙逆 年番",
+        "titleEn": "仙逆 年番",
+        "titleJa": "仙逆 年番",
+        "score": 7.1
+      },
+      {
+        "titleZh": "茶啊二中第五季",
+        "titleEn": "茶啊二中第五季",
+        "titleJa": "茶啊二中第五季",
+        "score": 7.1
+      },
+      {
+        "titleZh": "有兽焉 第四季",
+        "titleEn": "有兽焉 第四季",
+        "titleJa": "有兽焉 第四季",
+        "score": 7.1
+      },
+      {
+        "titleZh": "非人哉 第二季 25-48集",
+        "titleEn": "非人哉 第二季 Part.3",
+        "titleJa": "非人哉 第二季 Part.3",
+        "score": 7
+      },
+      {
+        "titleZh": "师兄啊师兄 年番",
+        "titleEn": "师兄啊师兄 年番",
+        "titleJa": "师兄啊师兄 年番",
+        "score": 7
+      },
+      {
+        "titleZh": "一念永恒 第三季",
+        "titleEn": "一念永恒 第三季",
+        "titleJa": "一念永恒 第三季",
+        "score": 7
+      },
+      {
+        "titleZh": "镇魂街 第四季",
+        "titleEn": "镇魂街 第四季",
+        "titleJa": "镇魂街 第四季",
+        "score": 7
+      },
+      {
+        "titleZh": "眷思量 第二季",
+        "titleEn": "眷思量 第二季",
+        "titleJa": "眷思量 第二季",
+        "score": 6.9
+      },
+      {
+        "titleZh": "沧元图 东宁府番外篇",
+        "titleEn": "沧元图 东宁府番外篇",
+        "titleJa": "沧元图 东宁府番外篇",
+        "score": 6.9
+      },
+      {
+        "titleZh": "斩神之凡尘神域",
+        "titleEn": "斩神之凡尘神域",
+        "titleJa": "斩神之凡尘神域",
+        "score": 6.9
+      },
+      {
+        "titleZh": "风灵玉秀 第二章 特别篇",
+        "titleEn": "风灵玉秀 第二章 特别篇",
+        "titleJa": "风灵玉秀 第二章 特别篇",
+        "score": 6.9
+      },
+      {
+        "titleZh": "诛仙 第二季",
+        "titleEn": "诛仙 第二季",
+        "titleJa": "诛仙 第二季",
+        "score": 6.8
+      },
+      {
+        "titleZh": "大道朝天",
+        "titleEn": "大道朝天",
+        "titleJa": "大道朝天",
+        "score": 6.8
+      },
+      {
+        "titleZh": "我的三体 第四季",
+        "titleEn": "我的三体 第四季",
+        "titleJa": "我的三体 第四季",
+        "score": 6.8
+      },
+      {
+        "titleZh": "沧元图 第二季",
+        "titleEn": "沧元图2",
+        "titleJa": "沧元图2",
+        "score": 6.8
+      },
+      {
+        "titleZh": "虎鹤妖师录",
+        "titleEn": "虎鹤妖师录",
+        "titleJa": "虎鹤妖师录",
+        "score": 6.7
+      },
+      {
+        "titleZh": "旅途危机！圣芙蕾雅号特别事件",
+        "titleEn": "旅途危机！圣芙蕾雅号特别事件",
+        "titleJa": "旅途危机！圣芙蕾雅号特别事件",
+        "score": 6.7
+      },
+      {
+        "titleZh": "百妖谱·司府篇",
+        "titleEn": "百妖谱·司府篇",
+        "titleJa": "百妖谱·司府篇",
+        "score": 6.7
+      },
+      {
+        "titleZh": "笼中人",
+        "titleEn": "笼中人",
+        "titleJa": "笼中人",
+        "score": 6.6
       }
     ],
     "2025": [
       {
-        "titleZh": "我的哪吒与变形金刚",
-        "titleEn": "我的哪吒与变形金刚",
-        "titleJa": "我的哪吒与变形金刚",
-        "score": 2.7
+        "titleZh": "凡人修仙传 第四季",
+        "titleEn": "凡人修仙传 第四季",
+        "titleJa": "凡人修仙传 第四季",
+        "score": 8.1
+      },
+      {
+        "titleZh": "枕刀歌3：孤城闭雪",
+        "titleEn": "枕刀歌3：孤城闭雪",
+        "titleJa": "枕刀歌3：孤城闭雪",
+        "score": 7.8
+      },
+      {
+        "titleZh": "火凤燎原 第二季",
+        "titleEn": "火凤燎原 贰",
+        "titleJa": "火凤燎原 贰",
+        "score": 7.5
+      },
+      {
+        "titleZh": "剑来 第二季",
+        "titleEn": "剑来 第二季",
+        "titleJa": "剑来 第二季",
+        "score": 7.4
+      },
+      {
+        "titleZh": "凡人修仙传 虚天战纪",
+        "titleEn": "凡人修仙传 虚天战纪",
+        "titleJa": "凡人修仙传 虚天战纪",
+        "score": 7.4
+      },
+      {
+        "titleZh": "百妖谱·洛阳篇",
+        "titleEn": "百妖谱·洛阳篇",
+        "titleJa": "百妖谱·洛阳篇",
+        "score": 7
+      },
+      {
+        "titleZh": "灵笼 第二季",
+        "titleEn": "灵笼 第二季",
+        "titleJa": "灵笼 第二季",
+        "score": 7
+      },
+      {
+        "titleZh": "光阴之外",
+        "titleEn": "光阴之外",
+        "titleJa": "光阴之外",
+        "score": 6.9
+      },
+      {
+        "titleZh": "诛仙 第三季",
+        "titleEn": "诛仙 第三季",
+        "titleJa": "诛仙 第三季",
+        "score": 6.8
+      },
+      {
+        "titleZh": "非人哉 第三季",
+        "titleEn": "非人哉 第三季",
+        "titleJa": "非人哉 第三季",
+        "score": 6.8
+      },
+      {
+        "titleZh": "新·异常生物见闻录：序",
+        "titleEn": "新·异常生物见闻录：序",
+        "titleJa": "新·异常生物见闻录：序",
+        "score": 6.7
+      },
+      {
+        "titleZh": "牧神记3",
+        "titleEn": "牧神记 叁",
+        "titleJa": "牧神记 叁",
+        "score": 6.7
+      },
+      {
+        "titleZh": "诡秘之主 小丑篇",
+        "titleEn": "诡秘之主 小丑篇",
+        "titleJa": "诡秘之主 小丑篇",
+        "score": 6.7
+      },
+      {
+        "titleZh": "仙逆 年番2",
+        "titleEn": "仙逆 年番2",
+        "titleJa": "仙逆 年番2",
+        "score": 6.7
+      },
+      {
+        "titleZh": "U探泰拉",
+        "titleEn": "U探泰拉",
+        "titleJa": "U探泰拉",
+        "score": 6.7
+      },
+      {
+        "titleZh": "神国之上",
+        "titleEn": "神国之上",
+        "titleJa": "神国之上",
+        "score": 6.6
+      },
+      {
+        "titleZh": "谷围南亭",
+        "titleEn": "谷围南亭",
+        "titleJa": "谷围南亭",
+        "score": 6.5
+      },
+      {
+        "titleZh": "遮天 第三季",
+        "titleEn": "遮天 第三季 崛起",
+        "titleJa": "遮天 第三季 崛起",
+        "score": 6.5
+      },
+      {
+        "titleZh": "牧神记2",
+        "titleEn": "牧神记 贰",
+        "titleJa": "牧神记 贰",
+        "score": 6.5
+      },
+      {
+        "titleZh": "沧元图 元初山番外篇",
+        "titleEn": "沧元图 元初山番外篇",
+        "titleJa": "沧元图 元初山番外篇",
+        "score": 6.4
+      },
+      {
+        "titleZh": "魔法公主的小烦恼",
+        "titleEn": "魔法公主的小烦恼",
+        "titleJa": "魔法公主的小烦恼",
+        "score": 6.4
+      },
+      {
+        "titleZh": "武动乾坤 第五季",
+        "titleEn": "武动乾坤 第五季",
+        "titleJa": "武动乾坤 第五季",
+        "score": 6.1
+      },
+      {
+        "titleZh": "云深不知梦",
+        "titleEn": "云深不知梦",
+        "titleJa": "云深不知梦",
+        "score": 6
+      },
+      {
+        "titleZh": "仙剑奇侠传三",
+        "titleEn": "仙剑奇侠传叁",
+        "titleJa": "仙剑奇侠传叁",
+        "score": 5.7
+      }
+    ],
+    "2026": [
+      {
+        "titleZh": "凡人修仙传 第五季",
+        "titleEn": "凡人修仙传 第五季",
+        "titleJa": "凡人修仙传 第五季",
+        "score": 7.6
+      },
+      {
+        "titleZh": "放开那个女巫",
+        "titleEn": "放开那个女巫",
+        "titleJa": "放开那个女巫",
+        "score": 7.3
+      },
+      {
+        "titleZh": "仙逆 年番3",
+        "titleEn": "仙逆 年番3",
+        "titleJa": "仙逆 年番3",
+        "score": 6.8
+      },
+      {
+        "titleZh": "呼唤少女特别篇 想做的事到底是什么",
+        "titleEn": "呼唤少女特别篇 想做的事到底是什么",
+        "titleJa": "呼唤少女特别篇 想做的事到底是什么",
+        "score": 6.6
+      },
+      {
+        "titleZh": "一人之下 第六季",
+        "titleEn": "一人之下 第6季",
+        "titleJa": "一人之下 第6季",
+        "score": 6.5
+      },
+      {
+        "titleZh": "中国奇谭 第二季",
+        "titleEn": "中国奇谭 第二季",
+        "titleJa": "中国奇谭 第二季",
+        "score": 6.2
       }
     ]
   },

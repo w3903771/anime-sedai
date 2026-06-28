@@ -4,6 +4,7 @@ import animeData, {
   COUNTRIES,
   DEFAULT_COUNTRY,
   getCountrySort,
+  getDefaultTopK,
 } from "../anime-data"
 import { domToBlob } from "modern-screenshot"
 import { toast } from "sonner"
@@ -50,8 +51,11 @@ export const App = () => {
     start: string
     end: string
   }>("customRange", DEFAULT_RANGE)
-  // 每年显示的动画数量（Top-K，1..24，数据每格最多存 24 条）
-  const [topK, setTopK] = usePersistState<number>("topK", 12)
+  // 每年显示的动画数量（Top-K，1..24，数据每格最多存 24 条；默认随国别，中国为 20）
+  const [topK, setTopK] = usePersistState<number>(
+    "topK",
+    getDefaultTopK(DEFAULT_COUNTRY)
+  )
 
   // 单元格宽度随 Top-K 自适应：K 越大格子越窄，整体宽度收敛在约 1240px 内
   const cellW = Math.max(48, Math.min(112, Math.round(1240 / (topK + 1))))
@@ -79,14 +83,15 @@ export const App = () => {
     return { countryMin: min, countryMax: max, countryYears: rangeYears(min, max) }
   }, [countryData])
 
-  // 真正切换国别时，把自定义区间重置为该国别全幅（不同国别数据跨度不同）
+  // 真正切换国别时：自定义区间重置为该国别全幅；每年数量重置为该国别默认(中国 20)
   const prevCountry = useRef(selectedCountry)
   useEffect(() => {
     if (prevCountry.current !== selectedCountry) {
       prevCountry.current = selectedCountry
       setCustomRange({ start: String(countryMin), end: String(countryMax) })
+      setTopK(getDefaultTopK(selectedCountry))
     }
-  }, [selectedCountry, countryMin, countryMax, setCustomRange])
+  }, [selectedCountry, countryMin, countryMax, setCustomRange, setTopK])
 
   const visibleYears = useMemo(() => {
     let lo: number
@@ -196,7 +201,7 @@ export const App = () => {
   const resetSettings = () => {
     setSelectedCountry(DEFAULT_COUNTRY)
     setYearRange("all")
-    setTopK(12)
+    setTopK(getDefaultTopK(DEFAULT_COUNTRY))
     setCustomRange(DEFAULT_RANGE)
   }
 
@@ -474,6 +479,14 @@ export const App = () => {
           >
             {t("viewCode")}
           </a>
+          {", "}
+          <a
+            href="https://anime-sedai.egoist.dev/"
+            target="_blank"
+            className="underline"
+          >
+            {t("viewOriginalSite")}
+          </a>
         </div>
 
         <div className="text-center text-base font-bold text-gray-800">
@@ -482,6 +495,13 @@ export const App = () => {
             ttzg.site
           </a>
           {t("forkBySuffix")}
+          <a
+            href="https://github.com/w3903771/anime-sedai"
+            target="_blank"
+            className="underline"
+          >
+            {t("viewCode")}
+          </a>
         </div>
       </div>
     </>
