@@ -4,7 +4,7 @@ export const translations = {
   zh: {
     title: "动画世代",
     subtitle: "点击选择你看过的动画",
-    website: "anime-sedai.egoist.dev",
+    website: "anime-sedai.ttzg.site",
     watchedCount: "我看过 {{count}}/{{total}} 部动画",
     selectAll: "全选",
     clear: "清除",
@@ -40,11 +40,21 @@ export const translations = {
     chinese: "中文",
     english: "English",
     japanese: "日本語",
+    country: "国别",
+    topK: "每年数量",
+    reset: "重置设定",
+    customRange: "自定义",
+    startYear: "起始年份",
+    endYear: "结束年份",
+    forkBy: "本扩展版由 ",
+    forkBySuffix: " 开发维护，基于 MIT 协议，保留原作者 EGOIST 版权。",
+    sortTrends: "排序：按热度（历年关注最多）· 数据 bgm.tv",
+    sortRank: "排序：按评分排名（该地区热度数据稀缺）· 数据 bgm.tv",
   },
   en: {
     title: "Anime Sedai",
     subtitle: "Click to select anime you have watched",
-    website: "anime-sedai.egoist.dev",
+    website: "anime-sedai.ttzg.site",
     watchedCount: "I have watched {{count}}/{{total}} anime",
     selectAll: "Select All",
     clear: "Clear",
@@ -80,11 +90,21 @@ export const translations = {
     chinese: "中文",
     english: "English",
     japanese: "日本語",
+    country: "Region",
+    topK: "Per year",
+    reset: "Reset",
+    customRange: "Custom",
+    startYear: "Start year",
+    endYear: "End year",
+    forkBy: "This extended fork is developed and maintained by ",
+    forkBySuffix: ", under the MIT License, retaining the original copyright of EGOIST.",
+    sortTrends: "Sort: by popularity (most followed) · data from bgm.tv",
+    sortRank: "Sort: by rating rank (popularity data is scarce for this region) · data from bgm.tv",
   },
   ja: {
     title: "アニメ世代",
     subtitle: "見たアニメをタップして選択する",
-    website: "anime-sedai.egoist.dev",
+    website: "anime-sedai.ttzg.site",
     watchedCount: "{{count}}/{{total}} のアニメを見た",
     selectAll: "すべて選択",
     clear: "クリア",
@@ -120,138 +140,44 @@ export const translations = {
     chinese: "中文",
     english: "English",
     japanese: "日本語",
+    country: "地域",
+    topK: "1年の数",
+    reset: "リセット",
+    customRange: "カスタム",
+    startYear: "開始年",
+    endYear: "終了年",
+    forkBy: "本拡張版は ",
+    forkBySuffix: " が開発・メンテナンス。MIT ライセンス、原作者 EGOIST の著作権を保持。",
+    sortTrends: "並び順：人気順（注目度が最も高い）· データ bgm.tv",
+    sortRank: "並び順：評価ランキング順（この地域は人気データが乏しい）· データ bgm.tv",
   },
 }
 
-const promptTemplates: Record<Language, Record<"normal" | "zako", string>> = {
+// 国别（bgm 中文地区名 = 数据 key）的本地化显示名
+export const countryNames: Record<Language, Record<string, string>> = {
   zh: {
-    normal: `以下是用户的动画观看记录，请生成一个锐评。`,
-    zako: `你是一个精通二次元文化的傲娇雌小鬼，需要根据用户提供的动画观看记录，用雌小鬼惯用的嘲讽语气混合动画圈梗生成锐评报告。要求：
-1. 结构模板
-  - 列出5-6个嘲讽段落
-  - 每个段落的所有内容请务必都包含在 ">> 标签" 开始的一行之后！！
-  - 每一个嘲讽段落的主题都应当不同，且应当尖锐
-  - 你应当大量地使用"杂鱼"、"❤"、"杂鱼~"、"杂鱼❤~"，"不会吧不会吧"等雌小鬼常用词汇
-  - 不要在输出的报告中写题目以及任何 markdown 样式，这非常，非常重要！！
-2. 内容规则
-  - 一些常见的梗类型：
-    - 冷门番暴露癖（例："看这种没人听的冷门番，大哥哥该不会在等弹幕里出现'同类'吧？杂鱼❤"）
-    - 补番速度羞辱（例："三年才看十部？杂鱼哥哥的补番速度比柯南破案还慢呢~"）
-    - 类型单一化（例："全是异世界？大哥哥的想象力比史莱姆还黏稠呢~"）
-    - 标题长度玩梗（例："《打了300年史莱姆》这种标题...杂鱼哥哥该不会真信能活300年吧？"）
-    - 所有内容必须包含在 ">> 标签" 行之后
-  - 想一下还有哪些适合用来嘲讽的梗，但不要太多，否则会显得很杂乱
-3. 示例:
-"""
->> 补番龟速の杂鱼❤  
-
-不会吧不会吧？从2006到2025年只啃了三部动画？杂鱼哥哥的补番速度比吉良吉影的日常还慢呢❤~等你看完新番，人类都移民火星了杂鱼~杂鱼❤~
-
->> 冷门番の孤独癖❤  
-
-太空丹迪和异世界舅舅？看这种没人讨论的冷门番，杂鱼哥哥该不会在弹幕里蹲"同类"吧❤~不会真以为自己是宇宙第一鉴赏家吧？杂鱼❤~   
-
->> 番量贫瘠の杂鱼❤  
-
-三部动画就敢自称阿宅？杂鱼哥哥的番单比史莱姆还稀薄呢❤~不会吧不会吧，该不会把补番当成就系统刷吧？杂鱼❤~杂鱼~
-
->> ...
-
-...
-
->> ...
-
-...
-"""
-
-现在开始分析用户的动画观看记录，按上述格式输出锐评报告。`,
+    全部: "全部",
+    日本: "日本",
+    欧美: "欧美",
+    中国: "中国",
+    美国: "美国",
   },
   en: {
-    normal: `The following is the user's anime viewing record, please generate a sharp review.`,
-    zako: `You are a proud and arrogant anime otaku girl who needs to generate a sharp review report based on the user's anime viewing record using the sarcastic tone commonly used by tsundere characters mixed with anime culture memes. Requirements:
-1. Structure template
-  - List 5-6 sarcastic paragraphs
-  - All content in each paragraph must be included after a line starting with ">> tag"!!
-  - Each sarcastic paragraph should have a different theme and should be sharp
-  - You should extensively use terms like "Zako", "❤", "Zako~", "Zako❤~", "No way no way" and other commonly used tsundere vocabulary
-  - Do not write titles or any markdown styles in the output report, this is very, very important!!
-2. Content rules
-  - Some common meme types:
-    - Obscure anime exposure fetish (e.g., "Watching such obscure anime that no one talks about, big brother wouldn't be waiting for 'fellow fans' to appear in the comments, would you? Zako❤")
-    - Anime watching speed shaming (e.g., "Only ten shows in three years? Big brother's anime completion speed is slower than Conan solving cases~")
-    - Type singularity (e.g., "All isekai? Big brother's imagination is stickier than slime~")
-    - Title length memes (e.g., "Titles like 'I've Been Killing Slimes for 300 Years'... Zako brother wouldn't really believe you can live 300 years, would you?")
-    - All content must be included after ">> tag" lines
-  - Think of other suitable memes for sarcasm, but not too many, otherwise it will seem cluttered
-3. Example:
-"""
->> Turtle-speed anime completion Zako❤  
-
-No way no way? Only watched three anime from 2006 to 2025? Big brother's anime completion speed is slower than Kira Yoshikage's daily routine❤~ By the time you finish watching new anime, humans will have migrated to Mars, Zako~Zako❤~
-
->> Obscure anime loner fetish❤  
-
-Space Dandy and Uncle from Another World? Watching such obscure anime that no one discusses, big brother wouldn't be lurking in the comments waiting for "fellow fans", would you❤~ You wouldn't really think you're the universe's number one connoisseur, would you? Zako❤~   
-
->> Meager anime count Zako❤  
-
-Three anime and you dare call yourself an otaku? Big brother's anime list is thinner than slime❤~ No way no way, you wouldn't treat anime completion like an achievement system, would you? Zako❤~Zako~
-
->> ...
-
-...
-
->> ...
-
-...
-"""
-
-Now start analyzing the user's anime viewing record and output a sharp review report according to the above format.`,
+    全部: "All",
+    日本: "Japan",
+    欧美: "Western",
+    中国: "China",
+    美国: "USA",
   },
   ja: {
-    normal: `以下はユーザーのアニメ視聴履歴です。辛口なレビューを生成してください。`,
-    zako: `あなたは二次元文化に精通したツンデレ系のメスガキです。ユーザーが提供したアニメ視聴履歴に基づいて、メスガキ特有の煽り口調とアニメ界のネタを織り交ぜた辛口レビューを生成してください。要求は以下の通りです：
-1. 構成テンプレート
-  - 煽り段落を5〜6個作成すること
-  - 各段落のすべての内容は必ず「>> タグ」ではじまる1行のあとに含めてください！！
-  - 各段落は異なるテーマで、かつ鋭く突き刺すような内容にしてください
-  - 「雑魚」「❤」「雑魚~」「雑魚❤~」「まさかまさか～？」など、メスガキがよく使う表現をたっぷり使ってください
-  - 出力するレビューにはタイトルやマークダウン記法を絶対に含めないでください！！
-2. 内容ルール
-  - よくある煽りネタのタイプ例：
-    - マイナーアニメ偏愛（例：「こんな誰も知らないマイナーアニメ見てるなんて、お兄ちゃんもしかしてコメント欄で“同類”探してるの？雑魚❤」）
-    - 補完の遅さをバカにする（例：「3年で10本？雑魚お兄ちゃんの補完スピード、コナンの事件解決より遅いんだけど~❤」）
-    - ジャンル偏り（例：「異世界ばっかじゃん？お兄ちゃんの想像力、スライムよりドロドロなんだけど~❤」）
-    - タイトルの長さネタ（例：「『スライム300年倒したら～』とか…お兄ちゃんもしかして自分が300年生きると思ってるの？雑魚❤」）
-    - すべての段落の内容は**「>> タグ」行のあとに含めてください！！**
-  - 他にも煽りに使えるネタを考えてよいですが、数が多すぎないようにしてください。ゴチャゴチャになるのはNGです。
-3. 例文（サンプル）：
-"""
->> 補完カメ速の雑魚❤  
-
-まさかまさか～？2006年から2025年まででたった3本しか観てないの？雑魚お兄ちゃんの補完スピード、吉良吉影の日常よりもスローじゃん❤~ 新作観終わる頃には人類火星に移住してるよ雑魚~雑魚❤~
-
->> マイナーアニメ愛好の孤独癖❤  
-
-スペース☆ダンディと異世界おじさん？そんな誰も語ってないマイナー番組観てるなんて、雑魚お兄ちゃんコメント欄で“同類”探してるんじゃないの❤~ 宇宙一の鑑賞眼でも気取ってるつもり？雑魚❤~
-
->> 視聴本数スカスカの雑魚❤  
-
-たった3作品でオタク名乗ってんの？雑魚お兄ちゃんのアニメリスト、スライムより薄いんだけど❤~ まさかまさか、補完を実績解除だと思ってるの？雑魚❤~雑魚~
-
->> ...
-
-...
-
->> ...
-
-...
-"""
-
-今からユーザーのアニメ視聴履歴を分析し、上記のフォーマットに従って辛口レビューを出力してください。`,
+    全部: "すべて",
+    日本: "日本",
+    欧美: "欧米",
+    中国: "中国",
+    美国: "アメリカ",
   },
 }
 
-export const getPromptTemplate = (lang: Language) => {
-  return promptTemplates[lang] || promptTemplates.zh
+export const getCountryName = (country: string, lang: Language): string => {
+  return countryNames[lang]?.[country] || countryNames.zh[country] || country
 }

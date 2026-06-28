@@ -1,6 +1,9 @@
 # dependencies (bun install)
 node_modules
 
+# 临时/调研脚本产物
+scratch-*
+
 # output
 out
 dist

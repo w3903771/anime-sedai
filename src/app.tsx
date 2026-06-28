@@ -1,16 +1,36 @@
-import { useMemo, useRef, useState, useEffect } from "react"
-import animeData, { getAnimeTitle } from "../anime-data"
+import { useMemo, useRef, useEffect } from "react"
+import animeData, {
+  getAnimeTitle,
+  COUNTRIES,
+  DEFAULT_COUNTRY,
+  getCountrySort,
+} from "../anime-data"
 import { domToBlob } from "modern-screenshot"
 import { toast } from "sonner"
 import { usePersistState } from "./hooks"
 import { useI18n } from "./i18n-context"
 import { LanguageToggle } from "./LanguageToggle"
-import { getPromptTemplate } from "./i18n"
+import { YearRangeSlider } from "./YearRangeSlider"
+import { getCountryName } from "./i18n"
 
-type YearRange = "5" | "10" | "15" | "all"
+type YearRange = "5" | "10" | "15" | "all" | "custom"
 
-const yearRangeOptions: YearRange[] = ["5", "10", "15", "all"]
-const allYears = Object.keys(animeData).sort((a, b) => Number(a) - Number(b))
+const yearRangeOptions: YearRange[] = ["5", "10", "15", "all", "custom"]
+// 默认("全部年份"预设)只展示 2006 起；更早(上世纪)年份仅在「自定义」滑块下、按所选国别可用范围暴露
+const DEFAULT_MIN_YEAR = 2006
+
+// 升序整数年份区间 → 字符串数组
+const rangeYears = (lo: number, hi: number): string[] =>
+  lo > hi ? [] : Array.from({ length: hi - lo + 1 }, (_, i) => String(lo + i))
+
+// 默认国别(日本)的初始自定义区间(全幅)
+const DEFAULT_YEAR_KEYS = Object.keys(animeData[DEFAULT_COUNTRY] ?? {}).sort(
+  (a, b) => Number(a) - Number(b)
+)
+const DEFAULT_RANGE = {
+  start: DEFAULT_YEAR_KEYS[0] ?? String(DEFAULT_MIN_YEAR),
+  end: DEFAULT_YEAR_KEYS[DEFAULT_YEAR_KEYS.length - 1] ?? String(DEFAULT_MIN_YEAR),
+}
 
 export const App = () => {
   const { t, language } = useI18n()
@@ -22,21 +42,79 @@ export const App = () => {
     "yearRange",
     "all"
   )
+  const [selectedCountry, setSelectedCountry] = usePersistState<string>(
+    "selectedCountry",
+    DEFAULT_COUNTRY
+  )
+  const [customRange, setCustomRange] = usePersistState<{
+    start: string
+    end: string
+  }>("customRange", DEFAULT_RANGE)
+  // 每年显示的动画数量（Top-K，1..24，数据每格最多存 24 条）
+  const [topK, setTopK] = usePersistState<number>("topK", 12)
+
+  // 单元格宽度随 Top-K 自适应：K 越大格子越窄，整体宽度收敛在约 1240px 内
+  const cellW = Math.max(48, Math.min(112, Math.round(1240 / (topK + 1))))
+  const cellFont =
+    cellW < 56 ? "text-[10px]" : language === "en" ? "text-xs" : "text-sm"
+
+  // 当前选中国别的 年份->列表 映射（稳定引用，供下游 memo 依赖）
+  const countryData = useMemo(
+    () => animeData[selectedCountry] ?? {},
+    [selectedCountry]
+  )
+
+  // 该国别的连续年份范围（最早..最晚有数据的年）——滑块与"全部"预设据此而定
+  const { countryMin, countryMax, countryYears } = useMemo(() => {
+    const keys = Object.keys(countryData).map(Number)
+    if (keys.length === 0) {
+      return {
+        countryMin: DEFAULT_MIN_YEAR,
+        countryMax: DEFAULT_MIN_YEAR,
+        countryYears: [] as string[],
+      }
+    }
+    const min = Math.min(...keys)
+    const max = Math.max(...keys)
+    return { countryMin: min, countryMax: max, countryYears: rangeYears(min, max) }
+  }, [countryData])
+
+  // 真正切换国别时，把自定义区间重置为该国别全幅（不同国别数据跨度不同）
+  const prevCountry = useRef(selectedCountry)
+  useEffect(() => {
+    if (prevCountry.current !== selectedCountry) {
+      prevCountry.current = selectedCountry
+      setCustomRange({ start: String(countryMin), end: String(countryMax) })
+    }
+  }, [selectedCountry, countryMin, countryMax, setCustomRange])
 
   const visibleYears = useMemo(() => {
-    if (yearRange === "all") {
-      return allYears
+    let lo: number
+    let hi: number
+    if (yearRange === "custom") {
+      lo = Math.min(Number(customRange.start), Number(customRange.end))
+      hi = Math.max(Number(customRange.start), Number(customRange.end))
+    } else if (yearRange === "all") {
+      lo = Math.max(DEFAULT_MIN_YEAR, countryMin) // 默认从 2006 起
+      hi = countryMax
+    } else {
+      hi = countryMax
+      lo = hi - Number(yearRange) + 1 // 近 N 年
     }
+    // 收敛到该国别可用范围
+    lo = Math.max(lo, countryMin)
+    hi = Math.min(hi, countryMax)
+    return rangeYears(lo, hi)
+  }, [yearRange, customRange, countryMin, countryMax])
 
-    return allYears.slice(-Number(yearRange))
-  }, [yearRange])
-
+  // 选择以「年份|中文名」为唯一键：同名不同年(如猎人1999/2011)互相独立，
+  // 且单年内标题唯一 → 无重复键，计数(已看/总数)始终一致。
   const visibleAnimeKeys = useMemo(() => {
     return visibleYears.flatMap((year) => {
-      const items = animeData[year] || []
-      return items.slice(0, 12).map((item) => getAnimeTitle(item, "zh"))
+      const items = countryData[year] || []
+      return items.slice(0, topK).map((item) => `${year}|${getAnimeTitle(item, "zh")}`)
     })
-  }, [visibleYears])
+  }, [visibleYears, countryData, topK])
 
   const visibleAnimeKeySet = useMemo(() => {
     return new Set(visibleAnimeKeys)
@@ -56,6 +134,8 @@ export const App = () => {
         return t("last15Years")
       case "all":
         return t("allYears")
+      case "custom":
+        return t("customRange")
     }
   }
 
@@ -110,58 +190,41 @@ export const App = () => {
     URL.revokeObjectURL(url)
   }
 
-  const [promptType, setPromptType] = useState<"normal" | "zako">("zako")
-  const prompt = useMemo(() => {
-    const templates = getPromptTemplate(language)
-    const preset = promptType === "normal" ? templates.normal : templates.zako
-
-    return `
-${preset}
-${
-  t("watched") === "Watched"
-    ? "User anime viewing record: (the year below is the anime release year)"
-    : "用户动画观看记录：(下面的年份是动画发布的年份)"
-}
-${visibleYears
-  .map((year) => {
-    const items = animeData[year] || []
-
-    if (items.length === 0) return ""
-
-    const sliceItems = items.slice(0, 12)
-    const watched = sliceItems
-      .filter((item) => selectedAnime.includes(getAnimeTitle(item, "zh")))
-      .map((item) => getAnimeTitle(item, language))
-      .join(", ")
-    const unWatched = sliceItems
-      .filter((item) => !selectedAnime.includes(getAnimeTitle(item, "zh")))
-      .map((item) => getAnimeTitle(item, language))
-      .join(", ")
-
-    return [
-      `**${year}${t("year")}**:`,
-      `${t("watched")}: ${watched || t("none")}`,
-      `${t("notWatched")}: ${unWatched || t("none")}`,
-    ]
-      .filter(Boolean)
-      .join("\n")
-  })
-  .filter(Boolean)
-  .join("\n")}
-    `.trim()
-  }, [selectedAnime, promptType, language, t, visibleYears])
-
   const totalAnime = visibleAnimeKeys.length
+
+  // 重置显示设定为默认（不动已选的"看过"记录）
+  const resetSettings = () => {
+    setSelectedCountry(DEFAULT_COUNTRY)
+    setYearRange("all")
+    setTopK(12)
+    setCustomRange(DEFAULT_RANGE)
+  }
 
   return (
     <>
-      <div className="flex flex-col gap-4 pb-10">
+      <div className="flex flex-col gap-4 pb-10 pt-2 min-h-screen bg-zinc-50 text-zinc-800">
         <div className="p-4 flex flex-col md:items-center">
           <div className="flex w-full flex-col gap-2 mb-4 md:flex-row md:items-center md:justify-center">
             <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600">{t("country")}:</span>
+              <select
+                className="border border-zinc-200 rounded px-2 py-1 text-sm bg-white shadow-sm hover:border-zinc-300 transition-colors"
+                value={selectedCountry}
+                onChange={(e) => {
+                  setSelectedCountry(e.currentTarget.value)
+                }}
+              >
+                {COUNTRIES.map((country) => (
+                  <option key={country} value={country}>
+                    {getCountryName(country, language)}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="flex items-center gap-2">
               <span className="text-sm text-gray-600">{t("yearRange")}:</span>
               <select
-                className="border rounded px-2 py-1 text-sm bg-white"
+                className="border border-zinc-200 rounded px-2 py-1 text-sm bg-white shadow-sm hover:border-zinc-300 transition-colors"
                 value={yearRange}
                 onChange={(e) => {
                   setYearRange(e.currentTarget.value as YearRange)
@@ -174,22 +237,62 @@ ${visibleYears
                 ))}
               </select>
             </div>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600">{t("topK")}:</span>
+              <input
+                type="number"
+                min={1}
+                max={24}
+                value={topK}
+                title="1 - 24"
+                onChange={(e) => {
+                  const v = Number(e.currentTarget.value)
+                  setTopK(Number.isFinite(v) ? Math.max(1, Math.min(24, v)) : 12)
+                }}
+                className="border border-zinc-200 rounded px-2 py-1 text-sm bg-white shadow-sm w-16 hover:border-zinc-300 transition-colors"
+              />
+              <span className="text-xs text-gray-400">1–24</span>
+            </div>
             <LanguageToggle />
+            <button
+              type="button"
+              onClick={resetSettings}
+              title={t("reset")}
+              className="border border-zinc-200 bg-white rounded px-3 py-1 text-sm text-gray-600 shadow-sm hover:bg-zinc-50 hover:border-zinc-300 active:bg-zinc-100 transition-colors"
+            >
+              {t("reset")}
+            </button>
+          </div>
+          {yearRange === "custom" && (
+            <div className="flex w-full max-w-screen-sm mx-auto items-center mb-4 px-2">
+              <YearRangeSlider
+                years={countryYears}
+                start={customRange.start}
+                end={customRange.end}
+                onChange={(start, end) => setCustomRange({ start, end })}
+              />
+            </div>
+          )}
+          {/* 排序口径说明：日本按热度，其余地区按评分排名 */}
+          <div className="mb-3 text-xs text-gray-500 text-center">
+            {getCountrySort(selectedCountry) === "trends"
+              ? t("sortTrends")
+              : t("sortRank")}
           </div>
           <div className="w-full overflow-x-auto">
             <div
-              className="flex flex-col border border-b-0 bg-white w-fit mx-auto"
+              className="flex flex-col border border-b-0 bg-white w-fit mx-auto rounded-xl overflow-hidden shadow-sm"
               ref={wrapper}
             >
-              <div className="border-b justify-between p-2 text-lg  font-bold flex">
-                <h1>
+              <div className="border-b justify-between items-center p-2.5 text-lg font-bold flex gap-3 bg-zinc-50/60">
+                <h1 className="tracking-tight">
                   {t("title")}
                   <span className="remove"> - {t("subtitle")}</span>
                   <span className="ml-2 text-zinc-400 font-medium">
                     {t("website")}
                   </span>
                 </h1>
-                <span className="shrink-0 whitespace-nowrap">
+                <span className="shrink-0 whitespace-nowrap text-base font-medium text-zinc-500">
                   {t("watchedCount", {
                     count: selectedVisibleAnimeCount,
                     total: totalAnime,
@@ -197,44 +300,35 @@ ${visibleYears
                 </span>
               </div>
               {visibleYears.map((year) => {
-                const items = animeData[year] || []
+                const items = countryData[year] || []
                 return (
                   <div key={year} className="flex border-b">
                     <div
-                      className={`
-                      bg-red-500 shrink-0 text-white flex items-center font-bold justify-center p-1 border-black
-                      h-16 md:h-20 
-                      ${language === "en" ? "w-16 md:w-20" : "w-16 md:w-20"}
-                    `}
+                      className="bg-red-500 shrink-0 text-white flex items-center font-bold justify-center p-1 border-black h-16 md:h-20"
+                      style={{ width: cellW }}
                     >
                       <span
                         className={`${
-                          language === "en"
-                            ? "text-sm md:text-base"
-                            : "text-base"
+                          cellW < 56 ? "text-xs" : "text-sm md:text-base"
                         } text-center`}
                       >
                         {year}
                       </span>
                     </div>
                     <div className="flex shrink-0">
-                      {items.slice(0, 12).map((item) => {
-                        const animeKey = getAnimeTitle(item, "zh")
+                      {items.slice(0, topK).map((item) => {
+                        const animeKey = `${year}|${getAnimeTitle(item, "zh")}`
                         const displayTitle = getAnimeTitle(item, language)
                         const isSelected = selectedAnime.includes(animeKey)
                         return (
                           <button
                             key={animeKey}
+                            style={{ width: cellW }}
                             className={`
-                              h-16 md:h-20 
-                              ${
-                                language === "en"
-                                  ? "w-20 md:w-24"
-                                  : "w-16 md:w-20"
-                              }
-                              border-l break-words text-center shrink-0 inline-flex items-center 
-                              p-1 overflow-hidden justify-center cursor-pointer 
-                              ${language === "en" ? "text-xs" : "text-sm"} 
+                              h-16 md:h-20
+                              border-l break-words text-center shrink-0 inline-flex items-center
+                              p-1 overflow-hidden justify-center cursor-pointer
+                              ${cellFont}
                               ${
                                 isSelected
                                   ? "bg-green-500"
@@ -267,19 +361,12 @@ ${visibleYears
                         )
                       })}
                       {Array.from(
-                        { length: Math.max(0, 12 - items.length) },
+                        { length: Math.max(0, topK - items.length) },
                         (_, index) => (
                           <div
                             key={`empty-${index}`}
-                            className={`
-                            h-16 md:h-20 
-                            ${
-                              language === "en"
-                                ? "w-20 md:w-24"
-                                : "w-16 md:w-20"
-                            }
-                            border-l bg-gray-50
-                          `}
+                            className="h-16 md:h-20 border-l bg-gray-50"
+                            style={{ width: cellW }}
                           />
                         )
                       )}
@@ -295,7 +382,7 @@ ${visibleYears
         <div className="flex gap-2 justify-center">
           <button
             type="button"
-            className="border rounded-md px-4 py-2 inline-flex"
+            className="border border-zinc-200 bg-white rounded-md px-4 py-2 inline-flex shadow-sm hover:bg-zinc-50 hover:border-zinc-300 active:bg-zinc-100 transition-colors"
             onClick={() => {
               setSelectedAnime((prev) => {
                 const hiddenSelectedAnime = prev.filter((title) => {
@@ -312,7 +399,7 @@ ${visibleYears
           {selectedVisibleAnimeCount > 0 && (
             <button
               type="button"
-              className="border rounded-md px-4 py-2 inline-flex"
+              className="border border-zinc-200 bg-white rounded-md px-4 py-2 inline-flex shadow-sm hover:bg-zinc-50 hover:border-zinc-300 active:bg-zinc-100 transition-colors"
               onClick={() => {
                 setSelectedAnime((prev) => {
                   return prev.filter((title) => !visibleAnimeKeySet.has(title))
@@ -325,7 +412,7 @@ ${visibleYears
 
           <button
             type="button"
-            className="border rounded-md px-4 py-2 inline-flex"
+            className="border border-zinc-200 bg-white rounded-md px-4 py-2 inline-flex shadow-sm hover:bg-zinc-50 hover:border-zinc-300 active:bg-zinc-100 transition-colors"
             onClick={() => {
               toast.promise(copyImage(), {
                 success: t("copySuccess"),
@@ -346,7 +433,7 @@ ${visibleYears
 
           <button
             type="button"
-            className="border rounded-md px-4 py-2 inline-flex"
+            className="border border-zinc-200 bg-white rounded-md px-4 py-2 inline-flex shadow-sm hover:bg-zinc-50 hover:border-zinc-300 active:bg-zinc-100 transition-colors"
             onClick={() => {
               toast.promise(downloadImage(), {
                 success: t("downloadSuccess"),
@@ -364,57 +451,6 @@ ${visibleYears
           >
             {t("downloadImage")}
           </button>
-        </div>
-
-        <div className="flex flex-col gap-2 max-w-screen-md w-full mx-auto">
-          <div className="border focus-within:ring-2 ring-pink-500 focus-within:border-pink-500 rounded-md">
-            <div className="flex items-center justify-between p-2 border-b">
-              <div className="flex items-center gap-2">
-                <span>{t("promptType")}</span>
-                <select
-                  className="border rounded-md"
-                  value={promptType}
-                  onChange={(e) => {
-                    setPromptType(e.currentTarget.value as any)
-                  }}
-                >
-                  <option value="normal">{t("promptNormal")}</option>
-                  <option value="zako">{t("promptZako")}</option>
-                </select>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <button
-                  type="button"
-                  className="text-sm text-zinc-500 hover:bg-zinc-100 px-1.5 h-7 flex items-center rounded-md"
-                  onClick={() => {
-                    navigator.clipboard.writeText(prompt)
-                    toast.success(t("copySuccess"))
-                  }}
-                >
-                  {t("copy")}
-                </button>
-
-                <button
-                  type="button"
-                  className="text-sm text-zinc-500 hover:bg-zinc-100 px-1.5 h-7 flex items-center rounded-md"
-                  onClick={() => {
-                    location.href = `chatwise://chat?input=${encodeURIComponent(
-                      prompt
-                    )}`
-                  }}
-                >
-                  {t("openInChatWise")}
-                </button>
-              </div>
-            </div>
-            <textarea
-              readOnly
-              className="outline-none w-full p-2 resize-none cursor-default"
-              rows={10}
-              value={prompt}
-            />
-          </div>
         </div>
 
         <div className="mt-2 text-center">
@@ -440,30 +476,12 @@ ${visibleYears
           </a>
         </div>
 
-        {language === "en" && (
-          <div className="text-center text-sm text-gray-600">
-            English version is translated by{" "}
-            <a
-              href="https://mhh0318.github.io/"
-              target="_blank"
-              className="underline"
-            >
-              h1t
-            </a>
-          </div>
-        )}
-
-        <div className="text-center">
-          {t("otherProducts")}
-          <a
-            href="https://chatwise.app"
-            target="_blank"
-            className="underline inline-flex items-center gap-1"
-          >
-            <img src="https://chatwise.app/favicon.png" className="size-4" />{" "}
-            ChatWise
+        <div className="text-center text-base font-bold text-gray-800">
+          {t("forkBy")}
+          <a href="https://ttzg.site" target="_blank" className="underline">
+            ttzg.site
           </a>
-          {t("aiChatClient")}
+          {t("forkBySuffix")}
         </div>
       </div>
     </>
