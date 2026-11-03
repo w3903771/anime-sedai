@@ -9,7 +9,16 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.tsx"></script>
-    
 
+    <!-- 自建访问统计 GoatCounter（https://stats.ttzg.site）
+         六个站共用一个看板，靠 path 前缀区分；本站前缀 /anime。
+         本站虽是 React SPA，但没有引入路由库（只有筛选交互，URL 不变），
+         所以不需要 no_onload + 手动上报那套 SPA 写法；哪天加了路由再改。
+         方案见 ttzgsite/ops/runbooks/analytics-stack.md -->
+    <script>
+      window.goatcounter = { path: function (p) { return '/anime' + p } }
+    </script>
+    <script data-goatcounter="https://stats.ttzg.site/count"
+            async src="https://stats.ttzg.site/count.js"></script>
   </body>
 </html>
