@@ -13,6 +13,7 @@ import { usePersistState } from "./hooks"
 import { useI18n } from "./i18n-context"
 import { LanguageToggle } from "./LanguageToggle"
 import { YearRangeSlider } from "./YearRangeSlider"
+import { VisitCounter } from "./VisitCounter"
 import { getCountryName } from "./i18n"
 
 type YearRange = "5" | "10" | "15" | "all" | "custom"
@@ -501,6 +502,8 @@ export const App = () => {
             {t("downloadImage")}
           </button>
         </div>
+
+        <VisitCounter />
 
         <div className="mt-2 text-center">
           {t("footer")}

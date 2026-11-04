@@ -54,6 +54,9 @@ export const translations = {
     sortRank: "排序：按评分排名 · 数据 bgm.tv",
     loading: "数据加载中…",
     loadFailed: "数据加载失败，点击重试",
+    visitToday: "今日来访",
+    visitTotal: "累计来访",
+    visitHint: "访问次数：同一访客 8 小时内重复打开只计一次，约每 30 分钟更新 · stats.ttzg.site",
   },
   en: {
     title: "Anime Sedai",
@@ -108,6 +111,9 @@ export const translations = {
     sortRank: "Sort: by rating rank · data from bgm.tv",
     loading: "Loading data…",
     loadFailed: "Failed to load data, click to retry",
+    visitToday: "Today",
+    visitTotal: "Total",
+    visitHint: "Visits: repeat opens by the same visitor within 8 hours count once; refreshed about every 30 min · stats.ttzg.site",
   },
   ja: {
     title: "アニメ世代",
@@ -162,6 +168,9 @@ export const translations = {
     sortRank: "並び順：評価ランキング順 · データ bgm.tv",
     loading: "データ読み込み中…",
     loadFailed: "読み込みに失敗しました（クリックで再試行）",
+    visitToday: "今日の来訪",
+    visitTotal: "累計来訪",
+    visitHint: "訪問数：同じ訪問者の 8 時間以内の再訪は 1 回として計上、約 30 分ごとに更新 · stats.ttzg.site",
   },
 }
 
