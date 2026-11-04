@@ -1,24 +1,20 @@
+// 国别 / 排序 / Top-K 等配置。只放常量与纯函数、不引入数据本体，
+// 供前端、抓取脚本(scripts/update-data.ts)与构建插件(vite-plugin-anime-data.ts)共用。
+// 数据按国别拆包、按需加载，见 src/data.ts。
 import type { Language } from "./src/i18n"
-import rawData from "./anime-data.json"
 
 export type AnimeItem = {
   titleZh: string
   titleEn: string
   titleJa: string
-  score: number
 }
 
-// 国别维度：country(bgm 中文地区名) -> year -> 动画列表
-export type Data = {
-  [country: string]: {
-    [year: string]: AnimeItem[]
-  }
+// 单个国别的数据：year -> 动画列表
+export type CountryData = {
+  [year: string]: AnimeItem[]
 }
 
-const data = rawData as Data
-
-// 国别清单（key = bgm 中文地区标签）。"全部" 排首位且为默认，
-// 对应 bgm 不带地区过滤的全地区热度榜。
+// 国别清单（key = bgm 中文地区标签）。"全部" 对应不带地区过滤的全部 TV 动画。
 export const ALL_COUNTRY = "全部"
 
 // 国别清单（日本为默认）。仅保留在 bgm「TV 动画」下确有数据的国别
@@ -28,6 +24,15 @@ export const COUNTRIES = ["日本", ALL_COUNTRY, "欧美", "中国", "美国"] a
 export type Country = (typeof COUNTRIES)[number]
 
 export const DEFAULT_COUNTRY = "日本"
+
+// 国别 → 数据 chunk 名（构建产物文件名用 ASCII）
+export const COUNTRY_SLUG: Record<Country, string> = {
+  日本: "jp",
+  全部: "all",
+  欧美: "west",
+  中国: "cn",
+  美国: "us",
+}
 
 // 排序口径（与 scripts/update-data.ts 的 RULES 保持一致）：日本按收藏总数(collect)；
 // 其余地区按评分排名(rank)。页面需向用户说明这一差异。
@@ -40,17 +45,6 @@ export const MAX_TOPK = 30
 // 所有国别默认都用最大值（每格尽量多显示）
 export const getDefaultTopK = (_country: string): number => MAX_TOPK
 
-// 取所有国别年份的并集并升序排序，保证年份范围 UI 与选中国别无关、保持稳定。
-export const getAllYears = (d: Data = data): string[] => {
-  const years = new Set<string>()
-  for (const country of Object.keys(d)) {
-    for (const year of Object.keys(d[country] || {})) {
-      years.add(year)
-    }
-  }
-  return [...years].sort((a, b) => Number(a) - Number(b))
-}
-
 // 根据语言获取动画标题（拼接字段名 titleZh / titleEn / titleJa）
 export const getAnimeTitle = (anime: AnimeItem, language: Language): string => {
   return anime[
@@ -59,5 +53,3 @@ export const getAnimeTitle = (anime: AnimeItem, language: Language): string => {
       language.slice(1)) as keyof AnimeItem
   ] as string
 }
-
-export default data

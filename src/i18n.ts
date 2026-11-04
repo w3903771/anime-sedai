@@ -52,6 +52,8 @@ export const translations = {
     forkBySuffix: " 开发维护，",
     sortCollect: "排序：按收藏人数 · 数据 bgm.tv",
     sortRank: "排序：按评分排名 · 数据 bgm.tv",
+    loading: "数据加载中…",
+    loadFailed: "数据加载失败，点击重试",
   },
   en: {
     title: "Anime Sedai",
@@ -104,6 +106,8 @@ export const translations = {
     forkBySuffix: " — ",
     sortCollect: "Sort: by number of collections · data from bgm.tv",
     sortRank: "Sort: by rating rank · data from bgm.tv",
+    loading: "Loading data…",
+    loadFailed: "Failed to load data, click to retry",
   },
   ja: {
     title: "アニメ世代",
@@ -156,6 +160,8 @@ export const translations = {
     forkBySuffix: " が開発・メンテナンス、",
     sortCollect: "並び順：コレクション数順 · データ bgm.tv",
     sortRank: "並び順：評価ランキング順 · データ bgm.tv",
+    loading: "データ読み込み中…",
+    loadFailed: "読み込みに失敗しました（クリックで再試行）",
   },
 }
 

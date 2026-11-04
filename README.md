@@ -38,7 +38,9 @@ bun run typecheck
 
 ## 数据
 
-数据固化在 `anime-data.json`（`{ 国别: { 年份: 动画[] } }`，每格存 Top-30），由 `anime-data.ts` 内联导入打包。
+数据固化在 `anime-data.json`（`{ 国别: { 年份: 动画[] } }`，每格存 Top-30）。
+构建时由 `vite-plugin-anime-data.ts` 按国别拆成独立的带 hash chunk（紧凑编码，去掉前端不用的字段），前端 `src/data.ts` 按需加载：
+默认国别通过 `modulepreload` 与主包并行下载，首屏空闲后再预取其余国别，切换无等待。
 
 抓取脚本 `scripts/update-data.ts` 走 **bgm 官方 API**（`GET https://api.bgm.tv/v0/subjects`）。bgm 网页列表页已被 Cloudflare 挑战 / 登录墙拦截，HTML 抓取不再可用。
 每个年份只拉一次全量 TV（中国另加 WEB），在本地按条目的 `meta_tags`（日本/中国/欧美/美国）分拣到各国别，再各自排序取前 30：

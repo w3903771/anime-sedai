@@ -1,5 +1,5 @@
 import { useMemo, useRef, useEffect, useState } from "react"
-import animeData, {
+import {
   getAnimeTitle,
   COUNTRIES,
   DEFAULT_COUNTRY,
@@ -7,7 +7,7 @@ import animeData, {
   getDefaultTopK,
   MAX_TOPK,
 } from "../anime-data"
-import { domToBlob } from "modern-screenshot"
+import { COUNTRY_SPANS, useCountryData } from "./data"
 import { toast } from "sonner"
 import { usePersistState } from "./hooks"
 import { useI18n } from "./i18n-context"
@@ -26,12 +26,10 @@ const rangeYears = (lo: number, hi: number): string[] =>
   lo > hi ? [] : Array.from({ length: hi - lo + 1 }, (_, i) => String(lo + i))
 
 // 默认国别(日本)的初始自定义区间(全幅)
-const DEFAULT_YEAR_KEYS = Object.keys(animeData[DEFAULT_COUNTRY] ?? {}).sort(
-  (a, b) => Number(a) - Number(b)
-)
+const DEFAULT_SPAN = COUNTRY_SPANS[DEFAULT_COUNTRY]
 const DEFAULT_RANGE = {
-  start: DEFAULT_YEAR_KEYS[0] ?? String(DEFAULT_MIN_YEAR),
-  end: DEFAULT_YEAR_KEYS[DEFAULT_YEAR_KEYS.length - 1] ?? String(DEFAULT_MIN_YEAR),
+  start: String(DEFAULT_SPAN?.[0] ?? DEFAULT_MIN_YEAR),
+  end: String(DEFAULT_SPAN?.[1] ?? DEFAULT_MIN_YEAR),
 }
 
 export const App = () => {
@@ -68,26 +66,28 @@ export const App = () => {
       ? { font: "text-xs", clamp: "line-clamp-5" }
       : { font: "text-sm", clamp: "line-clamp-4" }
 
-  // 当前选中国别的 年份->列表 映射（稳定引用，供下游 memo 依赖）
-  const countryData = useMemo(
-    () => animeData[selectedCountry] ?? {},
-    [selectedCountry]
-  )
+  // 当前选中国别的 年份->列表 映射（按需加载；同一国别引用稳定，供下游 memo 依赖）
+  const {
+    data: countryData,
+    loading: dataLoading,
+    error: dataError,
+    retry: retryData,
+  } = useCountryData(selectedCountry)
 
-  // 该国别的连续年份范围（最早..最晚有数据的年）——滑块与"全部"预设据此而定
+  // 该国别的连续年份范围（最早..最晚有数据的年）——滑块与"全部"预设据此而定。
+  // 跨度来自打进主包的 meta，数据未到达时年份行就已确定，不会跳动。
   const { countryMin, countryMax, countryYears } = useMemo(() => {
-    const keys = Object.keys(countryData).map(Number)
-    if (keys.length === 0) {
+    const span = COUNTRY_SPANS[selectedCountry]
+    if (!span) {
       return {
         countryMin: DEFAULT_MIN_YEAR,
         countryMax: DEFAULT_MIN_YEAR,
         countryYears: [] as string[],
       }
     }
-    const min = Math.min(...keys)
-    const max = Math.max(...keys)
+    const [min, max] = span
     return { countryMin: min, countryMax: max, countryYears: rangeYears(min, max) }
-  }, [countryData])
+  }, [selectedCountry])
 
   // 真正切换国别时：自定义区间重置为该国别全幅；每年数量重置为该国别默认(中国 20)
   const prevCountry = useRef(selectedCountry)
@@ -135,6 +135,9 @@ export const App = () => {
     return visibleAnimeKeySet.has(title)
   }).length
 
+  // 渲染时每格判断是否已选：用 Set 代替数组 includes（最多 67 年 × 30 格）
+  const selectedSet = useMemo(() => new Set(selectedAnime), [selectedAnime])
+
   const getYearRangeLabel = (option: YearRange) => {
     switch (option) {
       case "5":
@@ -159,6 +162,8 @@ export const App = () => {
   const imageToBlob = async () => {
     if (!wrapper.current) return
 
+    // 截图库只在导出时用到，按需加载，不占首屏
+    const { domToBlob } = await import("modern-screenshot")
     const blob = await domToBlob(wrapper.current, {
       scale: 2,
       filter(el) {
@@ -308,6 +313,16 @@ export const App = () => {
             {getCountrySort(selectedCountry) === "collect"
               ? t("sortCollect")
               : t("sortRank")}
+            {dataLoading && <span className="ml-2 text-zinc-400">· {t("loading")}</span>}
+            {dataError && (
+              <button
+                type="button"
+                onClick={retryData}
+                className="ml-2 text-red-500 underline underline-offset-2"
+              >
+                {t("loadFailed")}
+              </button>
+            )}
           </div>
           <div className="w-full overflow-x-auto">
             <div
@@ -353,7 +368,7 @@ export const App = () => {
                       {items.slice(0, topK).map((item) => {
                         const animeKey = `${year}|${getAnimeTitle(item, "zh")}`
                         const displayTitle = getAnimeTitle(item, language)
-                        const isSelected = selectedAnime.includes(animeKey)
+                        const isSelected = selectedSet.has(animeKey)
                         return (
                           <button
                             key={animeKey}
