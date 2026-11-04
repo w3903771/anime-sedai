@@ -50,8 +50,8 @@ export const translations = {
     endYear: "结束年份",
     forkBy: "本扩展版本由 ",
     forkBySuffix: " 开发维护，",
-    sortTrends: "排序：按热度（历年关注最多）· 数据 bgm.tv",
-    sortRank: "排序：按评分排名（该地区热度数据稀缺）· 数据 bgm.tv",
+    sortCollect: "排序：按收藏人数 · 数据 bgm.tv",
+    sortRank: "排序：按评分排名 · 数据 bgm.tv",
   },
   en: {
     title: "Anime Sedai",
@@ -102,8 +102,8 @@ export const translations = {
     endYear: "End year",
     forkBy: "This extended version is developed and maintained by ",
     forkBySuffix: " — ",
-    sortTrends: "Sort: by popularity (most followed) · data from bgm.tv",
-    sortRank: "Sort: by rating rank (popularity data is scarce for this region) · data from bgm.tv",
+    sortCollect: "Sort: by number of collections · data from bgm.tv",
+    sortRank: "Sort: by rating rank · data from bgm.tv",
   },
   ja: {
     title: "アニメ世代",
@@ -154,8 +154,8 @@ export const translations = {
     endYear: "終了年",
     forkBy: "本拡張版は ",
     forkBySuffix: " が開発・メンテナンス、",
-    sortTrends: "並び順：人気順（注目度が最も高い）· データ bgm.tv",
-    sortRank: "並び順：評価ランキング順（この地域は人気データが乏しい）· データ bgm.tv",
+    sortCollect: "並び順：コレクション数順 · データ bgm.tv",
+    sortRank: "並び順：評価ランキング順 · データ bgm.tv",
   },
 }
 

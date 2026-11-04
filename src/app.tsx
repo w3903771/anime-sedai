@@ -5,6 +5,7 @@ import animeData, {
   DEFAULT_COUNTRY,
   getCountrySort,
   getDefaultTopK,
+  MAX_TOPK,
 } from "../anime-data"
 import { domToBlob } from "modern-screenshot"
 import { toast } from "sonner"
@@ -51,7 +52,7 @@ export const App = () => {
     start: string
     end: string
   }>("customRange", DEFAULT_RANGE)
-  // 每年显示的动画数量（Top-K，1..24，数据每格最多存 24 条；默认随国别，中国为 20）
+  // 每年显示的动画数量（Top-K，1..MAX_TOPK，数据每格最多存 MAX_TOPK 条；默认取最大值）
   const [topK, setTopK] = usePersistState<number>(
     "topK",
     getDefaultTopK(DEFAULT_COUNTRY)
@@ -271,16 +272,16 @@ export const App = () => {
               <input
                 type="number"
                 min={1}
-                max={24}
+                max={MAX_TOPK}
                 value={topK}
-                title="1 - 24"
+                title={`1 - ${MAX_TOPK}`}
                 onChange={(e) => {
                   const v = Number(e.currentTarget.value)
-                  setTopK(Number.isFinite(v) ? Math.max(1, Math.min(24, v)) : 12)
+                  setTopK(Number.isFinite(v) ? Math.max(1, Math.min(MAX_TOPK, v)) : 12)
                 }}
                 className="border border-zinc-200 rounded px-2 py-1 text-sm bg-white shadow-sm w-16 hover:border-zinc-300 transition-colors"
               />
-              <span className="text-xs text-gray-400">1–24</span>
+              <span className="text-xs text-gray-400">1–{MAX_TOPK}</span>
             </div>
             <LanguageToggle />
             <button
@@ -302,10 +303,10 @@ export const App = () => {
               />
             </div>
           )}
-          {/* 排序口径说明：日本按热度，其余地区按评分排名 */}
+          {/* 排序口径说明：日本按收藏总数，其余地区按评分排名 */}
           <div className="mb-3 text-xs text-gray-500 text-center">
-            {getCountrySort(selectedCountry) === "trends"
-              ? t("sortTrends")
+            {getCountrySort(selectedCountry) === "collect"
+              ? t("sortCollect")
               : t("sortRank")}
           </div>
           <div className="w-full overflow-x-auto">

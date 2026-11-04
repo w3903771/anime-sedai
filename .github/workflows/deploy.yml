@@ -25,6 +25,8 @@ concurrency:
 
 jobs:
   build:
+    # 由数据更新触发时，仅在其成功后部署（失败说明数据没更新，不必重复部署旧数据）
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

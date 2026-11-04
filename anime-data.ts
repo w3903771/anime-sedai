@@ -29,14 +29,14 @@ export type Country = (typeof COUNTRIES)[number]
 
 export const DEFAULT_COUNTRY = "日本"
 
-// 排序口径：日本用 trends(热度，"历年关注最多"，可复用原作者人工精翻)；
-// 其余地区 trends 几乎无数据，只能用 rank(评分排名)。页面需向用户说明这一差异。
-export type SortBy = "trends" | "rank"
+// 排序口径（与 scripts/update-data.ts 的 RULES 保持一致）：日本按收藏总数(collect)；
+// 其余地区按评分排名(rank)。页面需向用户说明这一差异。
+export type SortBy = "collect" | "rank"
 export const getCountrySort = (country: string): SortBy =>
-  country === "日本" ? "trends" : "rank"
+  country === "日本" ? "collect" : "rank"
 
-// 「每年数量」(Top-K) 上限：数据每格最多存 24 条（bgm 列表页第 1 页上限）
-export const MAX_TOPK = 24
+// 「每年数量」(Top-K) 上限：数据每格最多存 30 条（抓取脚本 PER_YEAR 同此值）
+export const MAX_TOPK = 30
 // 所有国别默认都用最大值（每格尽量多显示）
 export const getDefaultTopK = (_country: string): number => MAX_TOPK
 

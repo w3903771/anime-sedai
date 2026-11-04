@@ -1,12 +1,18 @@
 name: Update anime data
 
-# 每月 1 号自动重抓「当前年份 × 全部国别」的数据，就地修改 anime-data.json 并提交。
-# 也可在 Actions 页面手动触发。
+# 每月 1 号经 bgm 官方 API 增量更新「当年 × 全部国别」（1 月额外定稿上一年），合并进 anime-data.json 并提交。
+# 抓取失败时脚本 exit 1、数据文件不动 → 本工作流标红（GitHub 会邮件通知），部署工作流也不会跟着跑。
+# 也可在 Actions 页面手动触发，可选指定年份。
 
 on:
   schedule:
-    - cron: "0 0 1 * *" # 每月 1 号 00:00 UTC
+    - cron: "0 0 1 * *" # 每月 1 号 00:00 UTC（北京时间 08:00）
   workflow_dispatch:
+    inputs:
+      year:
+        description: "指定年份（逗号分隔，留空=默认月更逻辑）"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -31,8 +37,10 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Refresh current-year data (all regions)
-        run: bun run data:update
+      - name: Refresh data via bgm API (all regions)
+        env:
+          YEAR: ${{ inputs.year }}
+        run: bun run data:update ${YEAR:+--year=$YEAR}
 
       - name: Commit & push if changed
         run: |
@@ -43,5 +51,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add anime-data.json
-          git commit -m "chore(data): monthly refresh $(date -u +%Y-%m)"
+          git commit -m "chore(data): refresh $(date -u +%Y-%m)"
           git push
